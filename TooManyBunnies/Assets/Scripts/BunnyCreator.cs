@@ -16,30 +16,30 @@ public class BunnyCreator : MonoBehaviour
     public GameObject playerHand;
     public BunnySprite[] spriteMap;
 
-
     private Dictionary<(string, string), string> breedingMap;
     private Dictionary<string, int> breedingTimes = new Dictionary<string, int>();
     private GameObject bunnyStorage;
 
     void Start()
     {
+
         bunnyStorage = GameObject.Find("Bunnies");
         breedingMap = new Dictionary<(string, string), string>();
-        breedingMap.Add(("White", "Black"), "Gray");
-        breedingMap.Add(("White", "Red"), "Pink");
-        breedingMap.Add(("White", "Blue"), "Cyan");
-        breedingMap.Add(("Red", "Yellow"), "Orange");
-        breedingMap.Add(("Red", "Blue"), "Purple");
-        breedingMap.Add(("Blue", "Yellow"), "Green");
-        breedingMap.Add(("Orange", "Black"), "Brown");
-        breedingMap.Add(("Gray", "Brown"), "Metal");
-        breedingMap.Add(("Pink", "Metal"), "Rose Quartz");
-        breedingMap.Add(("Purple", "Metal"), "Amethyst");
-        breedingMap.Add(("Metal", "Green"), "Emerald");
-        breedingMap.Add(("Metal", "Cyan"), "Silver");
-        breedingMap.Add(("Rose Quartz", "Amethyst"), "Tourmaline");
-        breedingMap.Add(("Emerald", "Silver"), "Adventurine");
-        breedingMap.Add(("Tourmaline", "Adventure"), "Golden");
+        breedingMap.Add(("White",       "Black"),       "Gray");
+        breedingMap.Add(("White",       "Red"),         "Pink");
+        breedingMap.Add(("White",       "Blue"),        "Cyan");
+        breedingMap.Add(("Red",         "Yellow"),      "Orange");
+        breedingMap.Add(("Red",         "Blue"),        "Purple");
+        breedingMap.Add(("Blue",        "Yellow"),      "Green");
+        breedingMap.Add(("Orange",      "Black"),       "Brown");
+        breedingMap.Add(("Gray",        "Brown"),       "Metal");
+        breedingMap.Add(("Pink",        "Metal"),       "Rose Quartz");
+        breedingMap.Add(("Purple",      "Metal"),       "Amethyst");
+        breedingMap.Add(("Metal",       "Green"),       "Emerald");
+        breedingMap.Add(("Metal",       "Cyan"),        "Silver");
+        breedingMap.Add(("Rose Quartz", "Amethyst"),    "Tourmaline");
+        breedingMap.Add(("Emerald",     "Silver"),      "Adventurine");
+        breedingMap.Add(("Tourmaline",  "Adventure"),   "Golden");
 
         breedingTimes.Add("White", 2);
         breedingTimes.Add("Gray", 2);
@@ -61,9 +61,6 @@ public class BunnyCreator : MonoBehaviour
         breedingTimes.Add("Red", 2);
         breedingTimes.Add("Blue", 2);
         breedingTimes.Add("Yellow", 2);
-
-
-
     }
 
 
@@ -80,11 +77,7 @@ public class BunnyCreator : MonoBehaviour
         string genderOne = bunnyOneAI.gender;
         string genderTwo = bunnyTwoAI.gender;
 
-        if (genderOne == genderTwo)
-        {
-            //Debug.Log("Same genders can't breed, silly!");
-        }
-        else
+        if (genderOne != genderTwo)
         {
 
             Transform bunnyOneTransform = bunnyOne.transform;
@@ -124,15 +117,15 @@ public class BunnyCreator : MonoBehaviour
 
             if (randomChoice == 3)
             {
-                createBunny(whiteBunny, resultBreed, posX, posY, gender);
+                createBunny(resultBreed, posX, posY, gender);
             }
             if (randomChoice == 2)
             {
-                createBunny(whiteBunny, breedTwo, posX, posY, gender);
+                createBunny(breedTwo, posX, posY, gender);
             }
             if (randomChoice == 1)
             {
-                createBunny(whiteBunny, breedOne, posX, posY, gender);
+                createBunny(breedOne, posX, posY, gender);
             }
             return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
@@ -142,12 +135,16 @@ public class BunnyCreator : MonoBehaviour
         return 0;
     }
 
-    private void createBunny(GameObject whiteBunny, string resultBreed, float posX, float posY, string gender) {
-        GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
-        bunbun.transform.SetParent(bunnyStorage.transform);
-        bunbun.GetComponent<BunnyAI>().gender = gender;
-        bunbun.GetComponent<BunnyAI>().breed = resultBreed;
-        bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[resultBreed];
-        bunbun.GetComponent<BunnyPickup>().playerHand = playerHand;
+    private void createBunny(string resultBreed, float posX, float posY, string gender) {
+
+        GameObject bunnyBaby = Instantiate(Resources.Load(resultBreed) as GameObject, 
+            new Vector3(posX, posY, 0), 
+            Quaternion.identity);
+
+        bunnyBaby.SetParent(bunnyStorage.transform);
+        bunnyBaby.GetComponent<BunnyAI>().gender = gender;
+        bunnyBaby.GetComponent<BunnyAI>().breed = resultBreed;
+        bunnyBaby.GetComponent<BunnyAI>().breedTimer = breedingTimes[resultBreed];
+        bunnyBaby.GetComponent<BunnyPickup>().playerHand = playerHand;
     }
 }

@@ -37,17 +37,7 @@ public class BunnyAI : MonoBehaviour
     // Cooldown time between bunnies breeding
     void breedCooldown()
     {
-        if (breedTimer != 0)
-        {
-            if (breedTimer - Time.deltaTime < 0)
-            {
-                breedTimer = 0;
-            }
-            else
-            {
-                breedTimer -= Time.deltaTime;
-            }
-        }
+        breedTimer -= Time.deltaTime;
     }
 
 
@@ -85,7 +75,7 @@ public class BunnyAI : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (breedTimer == 0)
+        if (breedTimer < 0)
         {
             breedTimer = breedingScript.breedBunny(gameObject, collision.gameObject);
         }
@@ -107,7 +97,7 @@ public class BunnyAI : MonoBehaviour
             animator.SetBool("walking", false);
         }
         spriteRenderer.flipX = flipDirection;
-        
+
     }
 
 }

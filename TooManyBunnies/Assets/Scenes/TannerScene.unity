@@ -255,7 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a36be0ac3b2c9c46bd6929b8ce615b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bunnyGroup: {fileID: 0}
   whiteBunny: {fileID: 0}
+  playerHand: {fileID: 0}
+  spriteMap: []
 --- !u!1001 &422794456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,6 +276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bunny (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086479, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -281,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 5112350631201086479, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.024460811
+      value: 0.423
       objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086479, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
@@ -880,6 +888,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6991769597727364378, guid: b098f8f755eb8004583506495bab08a3,
+        type: 3}
+      propertyPath: bunnyGroup
+      value: 
+      objectReference: {fileID: 376583889}
     - target: {fileID: 6991769597727364379, guid: b098f8f755eb8004583506495bab08a3,
         type: 3}
       propertyPath: m_Name
