@@ -24,28 +24,20 @@ public class BunnyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         checkMovement();
-
         transform.Translate(xSpeed, ySpeed, 0);
-        
-        if(xSpeed != 0 || ySpeed != 0) {
-            animator.SetBool("walking", true);
-        }
-        else {
-            animator.SetBool("walking", false);
-        }
-        
-        spriteRenderer.flipX = (xSpeed > 0);
+        checkAnimation();
     }
-
+    
 
     private float xSpeed = 0;
     private float ySpeed = 0;
-    private float moveTimer = 3.0f;
+    private float moveTimer = 1.0f;
 
     void checkMovement()
     {
+        
+
         if (moveTimer < 0 && Random.Range(0f, 1f) < (.1*bunnyMoveChance))
         {
             moveTimer = Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
@@ -64,6 +56,30 @@ public class BunnyAI : MonoBehaviour
 
             moveTimer -= Time.deltaTime;
         }
+    }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bunny")
+        {
+            Debug.Log("ouchie");
+        }
+    }
+
+
+    void checkAnimation()
+    {
+        if (xSpeed != 0 || ySpeed != 0)
+        {
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
+        }
+
+        spriteRenderer.flipX = (xSpeed > 0);
     }
 
 }
