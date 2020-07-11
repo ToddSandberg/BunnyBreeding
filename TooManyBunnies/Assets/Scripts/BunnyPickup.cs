@@ -28,7 +28,7 @@ public class BunnyPickup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && isBeingHeld == false) {
             GameObject player = playerHand.transform.parent.gameObject;
             if (this.GetComponent<CircleCollider2D> ().IsTouching(player.GetComponent<CircleCollider2D>())) {
                 transform.SetParent(playerHand.transform);
