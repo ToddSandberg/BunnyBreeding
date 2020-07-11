@@ -10,12 +10,15 @@ public class BunnyAI : MonoBehaviour
     public float bunnyMoveChance;
 
     private CircleCollider2D myCollider;
-
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         myCollider = GetComponent<CircleCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,15 @@ public class BunnyAI : MonoBehaviour
         checkMovement();
 
         transform.Translate(xSpeed, ySpeed, 0);
+        
+        if(xSpeed != 0 || ySpeed != 0) {
+            animator.SetBool("walking", true);
+        }
+        else {
+            animator.SetBool("walking", false);
+        }
+        
+        spriteRenderer.flipX = (xSpeed > 0);
     }
 
 
