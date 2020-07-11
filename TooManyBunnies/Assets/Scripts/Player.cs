@@ -18,16 +18,20 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) {
- 
+            
             // convert user input into world movement
-            float horizontalMovement = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
-            float verticalMovement = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
-        
+            float horizontalMovement = Input.GetAxisRaw("Horizontal");
+            float verticalMovement = Input.GetAxisRaw("Vertical");
+
             //assign movement to a single vector3
             Vector3 directionOfMovement = new Vector3(horizontalMovement, verticalMovement, 0);
-        
+    
+            //normalize movement for diagonal movement
+            directionOfMovement = directionOfMovement.normalized * Time.deltaTime * moveSpeed;
+            
             // apply movement to player's transform
             gameObject.transform.Translate(directionOfMovement);
         }
     }
+
 }
