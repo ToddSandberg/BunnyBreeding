@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -27,7 +30,7 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-    void Resume()
+    public void Resume()
     {
         pauseUI.SetActive(false);
         Time.timeScale = 1f;
@@ -39,5 +42,21 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(true);
         Time.timeScale = 0f;
         IsPaused = true;
+    }
+
+    public void RestartGame()
+    {
+
+        Time.timeScale = 1f;
+        Debug.Log("Resetting Game...");
+        IsPaused = false;
+        Application.LoadLevel(Application.loadedLevel);
+
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting Game");
+        Application.Quit();
     }
 }
