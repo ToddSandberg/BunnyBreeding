@@ -102,14 +102,12 @@ public class BunnyAI : MonoBehaviour
         {
             animator.SetBool("walking", true);
             flipDirection = (xSpeed > 0);
-            spriteRenderer.flipX = flipDirection;
         }
         else
         {
             animator.SetBool("walking", false);
-            spriteRenderer.flipX = flipDirection;
         }
-
+        spriteRenderer.flipX = flipDirection;
         
     }
 
