@@ -21,12 +21,10 @@ public class SellBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // Deletes bunnies if they touch the box
         if (collision.gameObject.tag == "Bunny") {
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Player") {
-            Destroy(collision.gameObject);
-        }
-        Debug.Log(collision.gameObject.tag);
+        
     }
 }
