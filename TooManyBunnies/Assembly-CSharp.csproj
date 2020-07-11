@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Bunnies\BunnyAI.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/Editor/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
