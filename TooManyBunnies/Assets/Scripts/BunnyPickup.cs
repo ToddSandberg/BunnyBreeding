@@ -35,9 +35,11 @@ public class BunnyPickup : MonoBehaviour
                 transform.localPosition = new Vector3(0, 0, -1);
                 this.GetComponent<BunnyAI>().enabled = false;
                 player.GetComponent<Inventory>().addBunny(gameObject);
+                gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 isBeingHeld = true;
             }
 		}
+
         if (Input.GetMouseButtonDown(1)) {
             GameObject player = playerHand.transform.parent.gameObject;
             if (isBeingHeld) {
