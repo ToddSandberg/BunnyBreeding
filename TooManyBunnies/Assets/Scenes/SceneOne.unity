@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: bunnyMoveChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -432,6 +437,11 @@ PrefabInstance:
       propertyPath: bunnyMoveChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -698,6 +708,11 @@ PrefabInstance:
       propertyPath: bunnyMoveChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -788,6 +803,11 @@ PrefabInstance:
       propertyPath: bunnyMoveChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -873,6 +893,11 @@ PrefabInstance:
       propertyPath: bunnyMoveChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -957,6 +982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: bunnyMoveChance
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
@@ -1048,6 +1078,11 @@ PrefabInstance:
       propertyPath: bunnyMoveChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -1132,6 +1167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: bunnyMoveChance
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
@@ -1388,6 +1428,11 @@ PrefabInstance:
       propertyPath: bunnyMoveChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -1472,6 +1517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: bunnyMoveChance
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
