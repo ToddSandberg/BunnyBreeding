@@ -137,8 +137,8 @@ public class BunnyCreator : MonoBehaviour
 
     private void createBunny(string resultBreed, float posX, float posY, string gender) {
 
-        GameObject bunnyBaby = Instantiate(Resources.Load(resultBreed) as GameObject, 
-            new Vector3(posX, posY, 0), 
+        GameObject bunnyBaby = Instantiate(Resources.Load(resultBreed) as GameObject,
+            new Vector3(posX, posY, 0),
             Quaternion.identity);
 
         bunnyBaby.SetParent(bunnyStorage.transform);
