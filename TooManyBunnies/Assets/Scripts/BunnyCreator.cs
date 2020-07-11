@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BunnyCreator : MonoBehaviour
 {
 
+    [Serializable]
+    public struct BunnySprite {
+        public string id;
+        public GameObject bunny;
+    }
+
     public GameObject whiteBunny;
     public GameObject playerHand;
+    public BunnySprite[] spriteMap;
 
 
     private Dictionary<(string, string), string> breedingMap;
@@ -101,11 +109,11 @@ public class BunnyCreator : MonoBehaviour
             int randomChoice;
             if (resultBreed != "")
             {
-                randomChoice = Random.Range(1, 3);
+                randomChoice = UnityEngine.Random.Range(1, 3);
             }
             else
             {
-                randomChoice = Random.Range(1, 2);
+                randomChoice = UnityEngine.Random.Range(1, 2);
             }
             if (randomChoice == 3)
             {
