@@ -6,6 +6,7 @@ public class BunnyCreator : MonoBehaviour
 {
 
     public GameObject whiteBunny;
+    public GameObject playerHand;
 
 
     private Dictionary<(string, string), string> breedingMap;
@@ -88,17 +89,17 @@ public class BunnyCreator : MonoBehaviour
 
             Debug.Log("Creating bunny at " + posX + ", " + posY + ".");
             Debug.Log("With Parents " + breedOne + ", " + breedTwo + ".");
-            string result = "";
+            string resultBreed = "";
             if (breedingMap.ContainsKey((breedOne, breedTwo)))
             {
-                result = breedingMap[(breedOne, breedTwo)];
+                resultBreed = breedingMap[(breedOne, breedTwo)];
             }
             else if (breedingMap.ContainsKey((breedTwo, breedOne)))
             {
-                result = breedingMap[(breedTwo, breedOne)];
+                resultBreed = breedingMap[(breedTwo, breedOne)];
             }
             int randomChoice;
-            if (result != "")
+            if (resultBreed != "")
             {
                 randomChoice = Random.Range(1, 3);
             }
@@ -108,21 +109,15 @@ public class BunnyCreator : MonoBehaviour
             }
             if (randomChoice == 3)
             {
-                GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
-                bunbun.GetComponent<BunnyAI>().breed = result;
-                bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[result];
+                createBunny(whiteBunny, resultBreed, posX, posY);
             }
             if (randomChoice == 2)
             {
-                GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
-                bunbun.GetComponent<BunnyAI>().breed = breedTwo;
-                bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[breedTwo];
+                createBunny(whiteBunny, breedTwo, posX, posY);
             }
             if (randomChoice == 1)
             {
-                GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
-                bunbun.GetComponent<BunnyAI>().breed = breedOne;
-                bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[breedOne];
+                createBunny(whiteBunny, breedOne, posX, posY);
             }
             return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
@@ -130,5 +125,13 @@ public class BunnyCreator : MonoBehaviour
 
 
         return 0;
+    }
+
+    private void createBunny(GameObject whiteBunny, string resultBreed, float posX, float posY) {
+        GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
+        bunbun.transform.SetParent(bunnyStorage.transform);
+        bunbun.GetComponent<BunnyAI>().breed = resultBreed;
+        bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[resultBreed];
+        bunbun.GetComponent<BunnyPickup>().playerHand = playerHand;
     }
 }

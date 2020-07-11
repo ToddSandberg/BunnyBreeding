@@ -34,7 +34,7 @@ public class BunnyAI : MonoBehaviour
         breedCooldown();
     }
 
-
+    // Cooldown time between bunnies breeding
     void breedCooldown()
     {
         if (breedTimer != 0)
