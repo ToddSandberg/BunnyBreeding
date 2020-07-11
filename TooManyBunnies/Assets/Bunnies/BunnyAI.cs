@@ -21,19 +21,20 @@ public class BunnyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         checkMovement();
 
         transform.Translate(xSpeed, ySpeed, 0);
     }
-
+    
 
     private float xSpeed = 0;
     private float ySpeed = 0;
-    private float moveTimer = 3.0f;
+    private float moveTimer = 1.0f;
 
     void checkMovement()
     {
+        
+
         if (moveTimer < 0 && Random.Range(0f, 1f) < (.1*bunnyMoveChance))
         {
             moveTimer = Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
