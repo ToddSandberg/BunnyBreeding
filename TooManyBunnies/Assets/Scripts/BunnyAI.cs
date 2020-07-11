@@ -78,7 +78,6 @@ public class BunnyAI : MonoBehaviour
         }
         else
         {
-
             moveTimer -= Time.deltaTime;
         }
     }
@@ -95,18 +94,23 @@ public class BunnyAI : MonoBehaviour
     }
 
 
+    private bool flipDirection;
+
     void checkAnimation()
     {
         if (xSpeed != 0 || ySpeed != 0)
         {
             animator.SetBool("walking", true);
+            flipDirection = (xSpeed > 0);
+            spriteRenderer.flipX = flipDirection;
         }
         else
         {
             animator.SetBool("walking", false);
+            spriteRenderer.flipX = flipDirection;
         }
 
-        spriteRenderer.flipX = (xSpeed > 0);
+        
     }
 
 }
