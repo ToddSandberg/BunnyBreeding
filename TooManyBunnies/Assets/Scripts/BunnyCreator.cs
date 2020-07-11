@@ -101,23 +101,30 @@ public class BunnyCreator : MonoBehaviour
             int randomChoice;
             if (resultBreed != "")
             {
-                randomChoice = Random.Range(1, 3);
+                randomChoice = Random.Range(1, 4);
             }
             else
             {
-                randomChoice = Random.Range(1, 2);
+                randomChoice = Random.Range(1, 3);
             }
+
+            int randomGender = Random.Range(1, 3);
+            string gender = "Male";
+            if (randomGender == 1) {
+                gender = "Female";
+            }
+
             if (randomChoice == 3)
             {
-                createBunny(whiteBunny, resultBreed, posX, posY);
+                createBunny(whiteBunny, resultBreed, posX, posY, gender);
             }
             if (randomChoice == 2)
             {
-                createBunny(whiteBunny, breedTwo, posX, posY);
+                createBunny(whiteBunny, breedTwo, posX, posY, gender);
             }
             if (randomChoice == 1)
             {
-                createBunny(whiteBunny, breedOne, posX, posY);
+                createBunny(whiteBunny, breedOne, posX, posY, gender);
             }
             return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
@@ -127,9 +134,10 @@ public class BunnyCreator : MonoBehaviour
         return 0;
     }
 
-    private void createBunny(GameObject whiteBunny, string resultBreed, float posX, float posY) {
+    private void createBunny(GameObject whiteBunny, string resultBreed, float posX, float posY, string gender) {
         GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
         bunbun.transform.SetParent(bunnyStorage.transform);
+        bunbun.GetComponent<BunnyAI>().gender = gender;
         bunbun.GetComponent<BunnyAI>().breed = resultBreed;
         bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[resultBreed];
         bunbun.GetComponent<BunnyPickup>().playerHand = playerHand;
