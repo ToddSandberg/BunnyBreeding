@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     public float moveSpeed = 5f;
     public float hitPoints = 100f;
-    private Animator animator;
+    //private Animator animator;
     private SpriteRenderer spriteRenderer;
 
     public GameObject runningSmoke;
@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //animator = gameObject.GetComponent<Animator>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,13 +38,10 @@ public class Player : MonoBehaviour
             // apply movement to player's transform
             gameObject.transform.Translate(directionOfMovement);
 
-            spriteRenderer.flipX = Input.GetKey("right");
+            
 
-            //Hai alex
-            animator.SetBool("walking", true);
-        } else {
-            animator.SetBool("walking", false);
-        }
+            
+        } 
     }
 
 }
