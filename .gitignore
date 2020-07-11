@@ -15,14 +15,14 @@ sysinfo.txt
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-[Ee]xported[Oo]bj/
+ExportedObj/
 .vs/
 /*.userprefs
-/*.csproj
+*.csproj
 /*.pidb
 *.pidb.meta
 /*.suo
-/*.sln*
+*.sln
 /*.user
 /*.unityproj
 /*.booproj
