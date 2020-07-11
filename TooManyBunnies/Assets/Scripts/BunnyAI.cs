@@ -66,7 +66,6 @@ public class BunnyAI : MonoBehaviour
             ySpeed = bunnySpeed * Mathf.Sin(angle);
             GetComponent<Rigidbody2D>().velocity = new Vector3(xSpeed, ySpeed, 0);
             checkAnimation();
-            Debug.Log(GetComponent<Rigidbody2D>().velocity);
         }
         else if (moveTimer < 0)
         {
