@@ -31,8 +31,6 @@ public class BunnyAI : MonoBehaviour
     void Update()
     {
         checkMovement();
-        transform.Translate(xSpeed, ySpeed, 0);
-        checkAnimation();
         breedCooldown();
     }
 
@@ -60,23 +58,26 @@ public class BunnyAI : MonoBehaviour
     void checkMovement()
     {
 
-
-        if (moveTimer < 0 && Random.Range(0f, 1f) < (.1 * bunnyMoveChance))
+        if (moveTimer < 0 && Random.Range(0f, 1f) < bunnyMoveChance)
         {
             moveTimer = Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
             float angle = Random.Range(0, 360);
             xSpeed = bunnySpeed * Mathf.Cos(angle);
             ySpeed = bunnySpeed * Mathf.Sin(angle);
+            GetComponent<Rigidbody2D>().velocity = new Vector3(xSpeed, ySpeed, 0);
+            checkAnimation();
+            Debug.Log(GetComponent<Rigidbody2D>().velocity);
         }
         else if (moveTimer < 0)
         {
             xSpeed = 0;
             ySpeed = 0;
-            moveTimer -= Time.deltaTime;
+            GetComponent<Rigidbody2D>().velocity = new Vector3(xSpeed, ySpeed, 0);
+            checkAnimation();
+            moveTimer = Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
         }
         else
         {
-
             moveTimer -= Time.deltaTime;
         }
     }
@@ -93,18 +94,21 @@ public class BunnyAI : MonoBehaviour
     }
 
 
+    private bool flipDirection;
+
     void checkAnimation()
     {
         if (xSpeed != 0 || ySpeed != 0)
         {
             animator.SetBool("walking", true);
+            flipDirection = (xSpeed > 0);
         }
         else
         {
             animator.SetBool("walking", false);
         }
-
-        spriteRenderer.flipX = (xSpeed > 0);
+        spriteRenderer.flipX = flipDirection;
+        
     }
 
 }
