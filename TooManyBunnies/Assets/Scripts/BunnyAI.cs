@@ -13,6 +13,7 @@ public class BunnyAI : MonoBehaviour
     public float breedTimer;
 
 
+    private float breedCooldownTime;
     private CircleCollider2D myCollider;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -37,7 +38,7 @@ public class BunnyAI : MonoBehaviour
     // Cooldown time between bunnies breeding
     void breedCooldown()
     {
-        breedTimer -= Time.deltaTime;
+        breedCooldownTime -= Time.deltaTime;
     }
 
 
@@ -75,9 +76,9 @@ public class BunnyAI : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (breedTimer < 0)
+        if (breedCooldownTime < 0)
         {
-            breedTimer = breedingScript.breedBunny(gameObject, collision.gameObject);
+            breedCooldownTime = breedingScript.breedBunny(gameObject, collision.gameObject);
         }
 
     }
