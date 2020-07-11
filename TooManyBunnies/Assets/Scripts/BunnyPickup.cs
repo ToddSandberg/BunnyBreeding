@@ -7,16 +7,14 @@ public class BunnyPickup : MonoBehaviour
     public GameObject player;
     public GameObject playerHand;
     
-    
     private bool isBeingHeld;
     
-    float distance = 10f;
-
+    
+    // For dragging things around
+    /*
     private Vector3 screenPoint;
 	private Vector3 offset;
 	
-    // For dragging things around
-    /*
 	void OnMouseDown(){
 		screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -31,14 +29,13 @@ public class BunnyPickup : MonoBehaviour
 
     void Update()
     {
-        
-
         if (Input.GetMouseButtonDown(0)) {
                 if (this.GetComponent<CircleCollider2D> ().IsTouching(player.GetComponent<CircleCollider2D>())) {
                     transform.SetParent(playerHand.transform);
                     transform.localPosition = new Vector3(0, 0, -1);
                     this.GetComponent<BunnyAI>().enabled = false;
                     player.GetComponent<Inventory>().addBunny(gameObject);
+                    
                     isBeingHeld = true;
             }
 		}
