@@ -15,14 +15,14 @@ sysinfo.txt
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-[Ee]xported[Oo]bj/
+ExportedObj/
 .vs/
 /*.userprefs
-/*.csproj
+*.csproj
 /*.pidb
 *.pidb.meta
 /*.suo
-/*.sln*
+*.sln
 /*.user
 /*.unityproj
 /*.booproj
@@ -43,3 +43,5 @@ Thumbs.db
 Desktop.ini
 Corridor/Library/ShaderCache/
 Corridor/Library/metadata/
+TooManyBunnies/TooManyBunnies.sln
+TooManyBunnies/Assembly-CSharp.csproj
