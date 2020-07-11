@@ -27,8 +27,8 @@ public class Inventory : MonoBehaviour
         inventoryUIHandler.GetComponent<InventoryUIHandler>().refresh(bunnies);
 
         //DEBUG while there is no UI to show
-        print("added bunny");
-        printDictionary();
+        // print("added bunny");
+        // printDictionary();
     }
 
     public GameObject removeBunny(string bunnyId) {
@@ -47,8 +47,8 @@ public class Inventory : MonoBehaviour
         inventoryUIHandler.GetComponent<InventoryUIHandler>().refresh(bunnies);
 
         //DEBUG while there is no UI to show
-        print("removed bunny");
-        printDictionary();
+        // print("removed bunny");
+        // printDictionary();
 
         return bunnyGameObject;
     }
