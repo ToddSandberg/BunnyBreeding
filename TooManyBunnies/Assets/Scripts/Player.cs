@@ -36,7 +36,8 @@ public class Player : MonoBehaviour
 
             //Hai alex
             animator.SetBool("walking", true);
-        } else {
+        } 
+        else {
             animator.SetBool("walking", false);
         }
     }
