@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private Dictionary<string, int> bunnies = Dictionary<string, int>();
+    private Dictionary<string, int> bunnies = new Dictionary<string, int>();
 
-    public addBunny(GameObject bunny) {
+    public void addBunny(GameObject bunny) {
         string key = "temp";
         if (bunnies.ContainsKey(key)) {
             bunnies[key]++;
@@ -15,8 +15,8 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public removeBunny(string bunnyId) {
-        if (!bunnies.ContainsKey(key)) {
+    public void removeBunny(string bunnyId) {
+        if (!bunnies.ContainsKey(bunnyId)) {
             throw new System.ArgumentException("Inventory map does not contain bunnyId", bunnyId);
         }
 
@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public getBunnies() {
+    public Dictionary<string, int> getBunnies() {
         return bunnies;
     }
 }
