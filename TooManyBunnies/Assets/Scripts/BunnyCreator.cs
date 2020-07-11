@@ -95,8 +95,8 @@ public class BunnyCreator : MonoBehaviour
             string breedOne = bunnyOneAI.breed;
             string breedTwo = bunnyTwoAI.breed;
 
-            Debug.Log("Creating bunny at " + posX + ", " + posY + ".");
-            Debug.Log("With Parents " + breedOne + ", " + breedTwo + ".");
+            // Debug.Log("Creating bunny at " + posX + ", " + posY + ".");
+            // Debug.Log("With Parents " + breedOne + ", " + breedTwo + ".");
             string resultBreed = "";
             if (breedingMap.ContainsKey((breedOne, breedTwo)))
             {
