@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BunnyAI : MonoBehaviour
 {
+    public string breed;
+    public string gender;
     public float bunnySpeed;
     public float minimumBunnyMoveTime;
     public float maximumBunnyMoveTime;
@@ -12,6 +14,7 @@ public class BunnyAI : MonoBehaviour
     private CircleCollider2D myCollider;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private Component breedingScript;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,7 @@ public class BunnyAI : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         myCollider = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        breedingScript = GameObject.Find("BunnyBreeder").GetComponent("BunnyCreator");
     }
 
     // Update is called once per frame
@@ -32,7 +36,7 @@ public class BunnyAI : MonoBehaviour
 
     private float xSpeed = 0;
     private float ySpeed = 0;
-    private float moveTimer = 1.0f;
+    private float moveTimer = 0f;
 
     void checkMovement()
     {
@@ -63,11 +67,10 @@ public class BunnyAI : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bunny")
         {
-            Debug.Log("collided");
-        } else
-        {
-            Debug.Log("Not Collided");
-        }
+            float posX = (transform.position.x + collision.transform.position.x) / 2;
+            float posY = (transform.position.y + collision.transform.position.y) / 2;
+            Debug.Log("Creating bunny at " + posX + ", " + posY);
+        } 
     }
 
 

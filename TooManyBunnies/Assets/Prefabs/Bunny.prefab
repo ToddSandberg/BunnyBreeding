@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f9496003d317747aff122c0423f2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breed: White
+  gender: Male
   bunnySpeed: 0.001
   minimumBunnyMoveTime: 1
   maximumBunnyMoveTime: 2.5
