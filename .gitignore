@@ -1,6 +1,3 @@
-# =============== #
-# Unity generated #
-# =============== #
 Temp/
 Obj/
 Build
@@ -11,10 +8,6 @@ sysinfo.txt
 /Assets/AssetStoreTools*
 *.apk
 *.unitypackage
- 
-# ===================================== #
-# Visual Studio / MonoDevelop generated #
-# ===================================== #
 ExportedObj/
 .vs/
 /*.userprefs
@@ -29,7 +22,6 @@ ExportedObj/
 .consulo/
 /*.tmp
 /*.svd
- 
 # ============ #
 # OS generated #
 # ============ #
@@ -44,4 +36,3 @@ Desktop.ini
 Corridor/Library/ShaderCache/
 Corridor/Library/metadata/
 TooManyBunnies/TooManyBunnies.sln
-TooManyBunnies/Assembly-CSharp.csproj
