@@ -25,17 +25,8 @@ public class BunnyAI : MonoBehaviour
     void Update()
     {
         checkMovement();
-
         transform.Translate(xSpeed, ySpeed, 0);
-        
-        if(xSpeed != 0 || ySpeed != 0) {
-            animator.SetBool("walking", true);
-        }
-        else {
-            animator.SetBool("walking", false);
-        }
-        
-        spriteRenderer.flipX = (xSpeed > 0);
+        checkAnimation();
     }
     
 
@@ -65,6 +56,30 @@ public class BunnyAI : MonoBehaviour
 
             moveTimer -= Time.deltaTime;
         }
+    }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bunny")
+        {
+            Debug.Log("ouchie");
+        }
+    }
+
+
+    void checkAnimation()
+    {
+        if (xSpeed != 0 || ySpeed != 0)
+        {
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
+        }
+
+        spriteRenderer.flipX = (xSpeed > 0);
     }
 
 }
