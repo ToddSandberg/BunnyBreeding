@@ -59,11 +59,14 @@ public class BunnyAI : MonoBehaviour
     }
 
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bunny")
         {
-            Debug.Log("ouchie");
+            Debug.Log("collided");
+        } else
+        {
+            Debug.Log("Not Collided");
         }
     }
 
