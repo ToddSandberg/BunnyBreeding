@@ -6,16 +6,14 @@ public class BunnyPickup : MonoBehaviour
 {
     public GameObject playerHand;
     
-    
     private bool isBeingHeld;
     
-    float distance = 10f;
-
+    
+    // For dragging things around
+    /*
     private Vector3 screenPoint;
 	private Vector3 offset;
 	
-    // For dragging things around
-    /*
 	void OnMouseDown(){
 		screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
