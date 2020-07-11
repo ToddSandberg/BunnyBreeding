@@ -10,11 +10,13 @@ public class BunnyAI : MonoBehaviour
     public float minimumBunnyMoveTime;
     public float maximumBunnyMoveTime;
     public float bunnyMoveChance;
+    public float breedTimer;
+
 
     private CircleCollider2D myCollider;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private Component breedingScript;
+    private BunnyCreator breedingScript;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,7 @@ public class BunnyAI : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         myCollider = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        breedingScript = GameObject.Find("BunnyBreeder").GetComponent("BunnyCreator");
+        breedingScript = GameObject.Find("BunnyBreeder").GetComponent<BunnyCreator>();
     }
 
     // Update is called once per frame
@@ -31,8 +33,25 @@ public class BunnyAI : MonoBehaviour
         checkMovement();
         transform.Translate(xSpeed, ySpeed, 0);
         checkAnimation();
+        breedCooldown();
     }
-    
+
+
+    void breedCooldown()
+    {
+        if(breedTimer != 0)
+        {
+            if(breedTimer - Time.deltaTime < 0)
+            {
+                breedTimer = 0;
+            }
+            else
+            {
+                breedTimer -= Time.deltaTime;
+            }
+        }
+    }
+
 
     private float xSpeed = 0;
     private float ySpeed = 0;
@@ -40,9 +59,9 @@ public class BunnyAI : MonoBehaviour
 
     void checkMovement()
     {
-        
 
-        if (moveTimer < 0 && Random.Range(0f, 1f) < (.1*bunnyMoveChance))
+
+        if (moveTimer < 0 && Random.Range(0f, 1f) < (.1 * bunnyMoveChance))
         {
             moveTimer = Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
             float angle = Random.Range(0, 360);
@@ -65,12 +84,16 @@ public class BunnyAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bunny")
-        {
-            float posX = (transform.position.x + collision.transform.position.x) / 2;
-            float posY = (transform.position.y + collision.transform.position.y) / 2;
-            Debug.Log("Creating bunny at " + posX + ", " + posY);
-        } 
+
+        BunnyAI bunnyOneAI = bunnyOne.GetComponent<BunnyAI>();
+        BunnyAI bunnyTwoAI = bunnyTwo.GetComponent<BunnyAI>();
+        string genderOne = bunnyOne.gender;
+        string genderTwo = bunnyTwo.gender;
+
+
+
+        breedTimer = breedingScript.breedBunny(gameObject, collision.gameObject);
+
     }
 
 
