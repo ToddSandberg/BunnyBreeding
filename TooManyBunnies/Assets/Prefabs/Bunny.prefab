@@ -106,6 +106,7 @@ MonoBehaviour:
   minimumBunnyMoveTime: 1
   maximumBunnyMoveTime: 2.5
   bunnyMoveChance: 0.03
+  breedTimer: 2
 --- !u!95 &5112350631201086475
 Animator:
   serializedVersion: 3
