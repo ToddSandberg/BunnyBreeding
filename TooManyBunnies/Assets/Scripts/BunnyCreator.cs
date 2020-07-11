@@ -142,7 +142,7 @@ public class BunnyCreator : MonoBehaviour
         return 0;
     }
 
-    private void createBunny(GameObject whiteBunny, string resultBreed, float posX, float posY, string gender) {
+    public void createBunny(GameObject whiteBunny, string resultBreed, float posX, float posY, string gender) {
         GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
         bunbun.transform.SetParent(bunnyStorage.transform);
         bunbun.GetComponent<BunnyAI>().gender = gender;
