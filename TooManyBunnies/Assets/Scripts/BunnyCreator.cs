@@ -86,22 +86,25 @@ public class BunnyCreator : MonoBehaviour
             {
                 GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
                 bunbun.GetComponent<BunnyAI>().breed = result;
+                bunbun.GetComponent<BunnyAI>().breedTimer = 1;
             }
             if (randomChoice == 2)
             {
                 GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
                 bunbun.GetComponent<BunnyAI>().breed = breedTwo;
+                bunbun.GetComponent<BunnyAI>().breedTimer = 1;
             }
             if (randomChoice == 1)
             {
                 GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
                 bunbun.GetComponent<BunnyAI>().breed = breedOne;
+                bunbun.GetComponent<BunnyAI>().breedTimer = 1;
             }
             return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
 
 
 
-
+        return 0;
     }
 }

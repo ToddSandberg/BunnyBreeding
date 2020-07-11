@@ -39,9 +39,9 @@ public class BunnyAI : MonoBehaviour
 
     void breedCooldown()
     {
-        if(breedTimer != 0)
+        if (breedTimer != 0)
         {
-            if(breedTimer - Time.deltaTime < 0)
+            if (breedTimer - Time.deltaTime < 0)
             {
                 breedTimer = 0;
             }
@@ -85,14 +85,10 @@ public class BunnyAI : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        BunnyAI bunnyOneAI = bunnyOne.GetComponent<BunnyAI>();
-        BunnyAI bunnyTwoAI = bunnyTwo.GetComponent<BunnyAI>();
-        string genderOne = bunnyOne.gender;
-        string genderTwo = bunnyTwo.gender;
-
-
-
-        breedTimer = breedingScript.breedBunny(gameObject, collision.gameObject);
+        if (breedTimer == 0)
+        {
+            breedTimer = breedingScript.breedBunny(gameObject, collision.gameObject);
+        }
 
     }
 

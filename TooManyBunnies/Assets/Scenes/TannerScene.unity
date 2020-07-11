@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: gender
       value: Female
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: breedTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -250,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a36be0ac3b2c9c46bd6929b8ce615b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whiteBunny: {fileID: 0}
 --- !u!1 &420212334
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +393,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376583890}
     m_Modifications:
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: breedTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -811,6 +822,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376583890}
     m_Modifications:
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: breedTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -890,6 +906,11 @@ PrefabInstance:
         type: 3}
       propertyPath: gender
       value: Female
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: breedTimer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
@@ -988,6 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a36be0ac3b2c9c46bd6929b8ce615b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whiteBunny: {fileID: 0}
 --- !u!4 &1821330434
 Transform:
   m_ObjectHideFlags: 0
@@ -1013,6 +1035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: gender
       value: Female
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: breedTimer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
@@ -1219,6 +1246,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376583890}
     m_Modifications:
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: breedTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
