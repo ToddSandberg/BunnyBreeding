@@ -7,10 +7,8 @@ public class Player : MonoBehaviour
 
     public float moveSpeed = 5f;
     public float hitPoints = 100f;
-    //private Animator animator;
+    private Animator animator;
     private SpriteRenderer spriteRenderer;
-
-    public GameObject runningSmoke;
 
 
     // Start is called before the first frame update
@@ -34,7 +32,7 @@ public class Player : MonoBehaviour
             // apply movement to player's transform
             gameObject.transform.Translate(directionOfMovement);
 
-            print("hello");
+            spriteRenderer.flipX = Input.GetKey("right") || Input.GetKey("d");
 
             //Hai alex
             animator.SetBool("walking", true);
