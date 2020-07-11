@@ -30,11 +30,9 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-    public void Resume()
+    public void MainMenu()
     {
-        pauseUI.SetActive(false);
-        Time.timeScale = 1f;
-        IsPaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     void Pause()
@@ -50,8 +48,20 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("Resetting Game...");
         IsPaused = false;
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+    }
+
+    public void Resume()
+    {
+        pauseUI.SetActive(false);
+        Time.timeScale = 1f;
+        IsPaused = false;
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
