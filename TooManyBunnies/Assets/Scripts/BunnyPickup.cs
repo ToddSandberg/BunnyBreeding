@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BunnyPickup : MonoBehaviour
 {
-    public GameObject player;
     public GameObject playerHand;
     private bool isBeingHeld;
 
     void Update()
     {
         if (Input.GetKeyDown (KeyCode.E)) {
+            GameObject player = playerHand.transform.parent.gameObject;
             if (isBeingHeld) {
                 transform.parent = null;
                 this.GetComponent<BunnyAI>().enabled = true;
