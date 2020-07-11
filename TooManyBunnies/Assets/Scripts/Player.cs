@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
-    public float hitPoints = 100f;
 
 
     // Start is called before the first frame update
