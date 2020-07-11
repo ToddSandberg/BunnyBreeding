@@ -6,12 +6,16 @@ using UnityEngine;
 using Debug = UnityEngine.Debug;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
 
     public static bool IsPaused = false;
+    public static bool WinCondition = false;
+    public static bool LossCondition = false;
 
     public GameObject pauseUI;
+    public GameObject winUI; 
+    public GameObject loseUI;
 
     // Update is called once per frame
     void Update()
@@ -28,6 +32,21 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
+        if (WinCondition) {
+            Winner();
+        }
+
+        if (LossCondition)
+        {
+            Loser();
+        }
+
+    }
+
+    void Loser()
+    {
+        winUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void MainMenu()
@@ -48,6 +67,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("Resetting Game...");
         IsPaused = false;
+        WinCondition = false;
+        LossCondition = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
@@ -68,5 +89,11 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Quitting Game");
         Application.Quit();
+    }
+
+    void Winner()
+    {
+        winUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
