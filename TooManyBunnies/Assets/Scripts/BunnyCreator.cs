@@ -8,8 +8,9 @@ public class BunnyCreator : MonoBehaviour
     public GameObject whiteBunny;
 
 
-    Dictionary<(string, string), string> breedingMap;
-    GameObject bunnyStorage;
+    private Dictionary<(string, string), string> breedingMap;
+    private Dictionary<string, int> breedingTimes = new Dictionary<string, int>();
+    private GameObject bunnyStorage;
 
     void Start()
     {
@@ -31,6 +32,29 @@ public class BunnyCreator : MonoBehaviour
         breedingMap.Add(("Emerald", "Silver"), "Adventurine");
         breedingMap.Add(("Tourmaline", "Adventure"), "Golden");
 
+        breedingTimes.Add("White", 2);
+        breedingTimes.Add("Gray", 2);
+        breedingTimes.Add("Pink", 2);
+        breedingTimes.Add("Black", 2);
+        breedingTimes.Add("Cyan", 2);
+        breedingTimes.Add("Orange", 2);
+        breedingTimes.Add("Purple", 2);
+        breedingTimes.Add("Green", 2);
+        breedingTimes.Add("Brown", 2);
+        breedingTimes.Add("Metal", 2);
+        breedingTimes.Add("Rose Quartz", 2);
+        breedingTimes.Add("Amethyst", 2);
+        breedingTimes.Add("Emerald", 2);
+        breedingTimes.Add("Silver", 2);
+        breedingTimes.Add("Tourmaline", 2);
+        breedingTimes.Add("Adventurine", 2);
+        breedingTimes.Add("Golden", 2);
+        breedingTimes.Add("Red", 2);
+        breedingTimes.Add("Blue", 2);
+        breedingTimes.Add("Yellow", 2);
+
+
+
     }
 
 
@@ -49,7 +73,7 @@ public class BunnyCreator : MonoBehaviour
 
         if (genderOne == genderTwo)
         {
-            Debug.Log("Same genders can't breed, silly!");
+            //Debug.Log("Same genders can't breed, silly!");
         }
         else
         {
@@ -86,19 +110,19 @@ public class BunnyCreator : MonoBehaviour
             {
                 GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
                 bunbun.GetComponent<BunnyAI>().breed = result;
-                bunbun.GetComponent<BunnyAI>().breedTimer = 1;
+                bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[result];
             }
             if (randomChoice == 2)
             {
                 GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
                 bunbun.GetComponent<BunnyAI>().breed = breedTwo;
-                bunbun.GetComponent<BunnyAI>().breedTimer = 1;
+                bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[breedTwo];
             }
             if (randomChoice == 1)
             {
                 GameObject bunbun = Instantiate(whiteBunny, new Vector3(posX, posY, 0), Quaternion.identity);
                 bunbun.GetComponent<BunnyAI>().breed = breedOne;
-                bunbun.GetComponent<BunnyAI>().breedTimer = 1;
+                bunbun.GetComponent<BunnyAI>().breedTimer = breedingTimes[breedOne];
             }
             return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
