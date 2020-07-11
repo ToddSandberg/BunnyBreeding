@@ -6,24 +6,22 @@ using UnityEngine.UI;
 public class InventoryButtonClick : MonoBehaviour
 {
 
-    public GameObject playerHand;
+    public GameObject player;
     public GameObject bunnyBreeder;
 
-    private Button myButton = null;
+    private Button myButton;
 
-    // Start is called before the first frame update
     void Start()
     {
-        myButton.onClick.AddListener(bunnyBreeder.GetComponent<BunnyCreator>().createBunny(GameObject whiteBunny, string resultBreed, float posX, float posY, string gender));
-        
+        player = GameObject.Find("Player");
+        myButton = gameObject.GetComponent<Button>();
+        myButton.onClick.AddListener(handleClick);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void handleClick() {
+        string id = gameObject.GetComponentInChildren<Text>().text.Split('•')[0].Trim();
+        GameObject bunny = player.GetComponent<Inventory>().removeBunny(id);
+        bunny.SetActive(true);
+        bunny.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
     }
-
-    
-
 }
