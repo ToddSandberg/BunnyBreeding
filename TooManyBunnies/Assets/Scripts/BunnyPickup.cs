@@ -40,6 +40,8 @@ public class BunnyPickup : MonoBehaviour
         bool didPickup = playerObject.GetComponent<Inventory>().addBunny(gameObject);
         if (didPickup) {
             gameObject.SetActive(false);
+        } else {
+            playerObject.GetComponentsInChildren<NotificationHandler>()[0].createNotification("Too many bunnies in inventory", playerObject.transform.position);
         }
     }
 

@@ -9,10 +9,10 @@ public class Inventory : MonoBehaviour
     private Dictionary<string, Stack<GameObject>> bunnyGameObjects = new Dictionary<string, Stack<GameObject>>();
 
     public GameObject inventoryUIHandler;
-    public int holdingLimit = 20;
+    public int holdingLimit = 1;
 
     public bool addBunny(GameObject bunny) {
-        print(bunnies.Sum(x => x.Value) + ":" + holdingLimit);
+        print(holdingLimit);
         if (bunnies.Sum(x => x.Value) >= holdingLimit) {
             return false;
         }
