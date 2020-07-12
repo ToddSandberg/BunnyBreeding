@@ -53,16 +53,16 @@ public class UIManager : MonoBehaviour
 
     }
 
-    void BunnyUpdate()
+    public void BunnyUpdate()
     {
         string bunnies = BunnyStats.getBunnyCount().ToString();
-        BunnyNumA.text(bunnies);
+        BunnyNumA.GetComponent<Text>().text = bunnies;
     }
 
-    void GoldUpdate()
+    public void GoldUpdate()
     {
         string gold = BunnyStats.getGold().ToString();
-        GoldNumA.text(gold);
+        GoldNumA.GetComponent<Text>().text = gold;
     }
 
     void Loser()
