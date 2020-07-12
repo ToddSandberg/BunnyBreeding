@@ -992,7 +992,7 @@ PrefabInstance:
     - target: {fileID: 6646606688293537726, guid: 94458e92d4ab07a4da4022a4162a8ea4,
         type: 3}
       propertyPath: gender
-      value: Female
+      value: Male
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94458e92d4ab07a4da4022a4162a8ea4, type: 3}
@@ -3806,7 +3806,7 @@ PrefabInstance:
     - target: {fileID: 943202362346094382, guid: 54e32a43af3419044aec414c36706d92,
         type: 3}
       propertyPath: gender
-      value: Female
+      value: Male
       objectReference: {fileID: 0}
     - target: {fileID: 5468595204345949331, guid: 54e32a43af3419044aec414c36706d92,
         type: 3}
@@ -4456,7 +4456,7 @@ PrefabInstance:
     - target: {fileID: 2693945733214863512, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
         type: 3}
       propertyPath: gender
-      value: Female
+      value: Male
       objectReference: {fileID: 0}
     - target: {fileID: 2693945733214863517, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
         type: 3}
@@ -8285,7 +8285,7 @@ PrefabInstance:
     - target: {fileID: 7612004917202123956, guid: d7d9c9be3e17c1a4ea364fe742d83cba,
         type: 3}
       propertyPath: gender
-      value: Female
+      value: Male
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d9c9be3e17c1a4ea364fe742d83cba, type: 3}
@@ -8306,6 +8306,11 @@ PrefabInstance:
       propertyPath: playerHand
       value: 
       objectReference: {fileID: 1475567389}
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: gender
+      value: Male
+      objectReference: {fileID: 0}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name

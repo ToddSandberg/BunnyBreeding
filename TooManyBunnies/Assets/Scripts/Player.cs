@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float hitPoints = 100f;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    private AudioSource audio;
+    new private AudioSource audio;
     private bool isPlayingSound = false;
 
     // Start is called before the first frame update

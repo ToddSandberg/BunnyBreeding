@@ -27,12 +27,15 @@ public class BunnyAI : MonoBehaviour
         myCollider = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         breedingScript = GameObject.Find("BunnyBreeder").GetComponent<BunnyCreator>();
+        if (gender == "Male")
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         checkMovement();
+        checkBow();
         breedCooldown();
     }
 
@@ -85,11 +88,34 @@ public class BunnyAI : MonoBehaviour
 
     }
 
+    private bool previousFlip = false;
 
-    private bool flipDirection;
+    void checkBow()
+    {
+
+        if (gender == "Female")
+        {
+            bool flipDirection = xSpeed > 0;
+            if (previousFlip != flipDirection)
+            {
+                int mult;
+                if (flipDirection)
+                    mult = 1;
+                else
+                    mult = -1;
+
+                Transform bow = gameObject.transform.GetChild(1);
+                bow.localPosition = new Vector3(mult * Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
+                bow.GetComponent<SpriteRenderer>().flipX = !bow.GetComponent<SpriteRenderer>().flipX;
+            }
+            previousFlip = flipDirection;
+        }
+    }
+
 
     void checkAnimation()
     {
+        bool flipDirection = false;
         if (xSpeed != 0 || ySpeed != 0)
         {
             animator.SetBool("walking", true);
@@ -101,18 +127,8 @@ public class BunnyAI : MonoBehaviour
         }
         spriteRenderer.flipX = flipDirection;
 
-        //if (gender == "Female" && flipDirection)
-        //{
-        //    Transform bow = gameObject.transform.GetChild(1);
-        //    bow.localPosition = new Vector3(Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
-        //    bow.GetComponent<SpriteRenderer>().flipX = true;
-        //}
-        //else
-        //{
-        //    Transform bow = gameObject.transform.GetChild(1);
-        //    bow.localPosition = new Vector3(-Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
-        //    bow.GetComponent<SpriteRenderer>().flipX = false;
-        //}
+
+
 
 
     }
