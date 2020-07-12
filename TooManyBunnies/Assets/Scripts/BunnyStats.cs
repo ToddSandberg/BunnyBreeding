@@ -4,7 +4,7 @@ using System.Diagnostics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-public class Stats : MonoBehaviour
+public class BunnyStats : MonoBehaviour
 {
 
     public static int bunnyCount;

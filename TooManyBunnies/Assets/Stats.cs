@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BunnyStats : MonoBehaviour
+public class Stats : MonoBehaviour
 {
 
     public static int bunnyCount;
