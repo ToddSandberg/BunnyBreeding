@@ -3185,6 +3185,10 @@ MonoBehaviour:
   pauseUI: {fileID: 1878468598}
   winUI: {fileID: 0}
   loseUI: {fileID: 0}
+  BunnyNumA: {fileID: 0}
+  BunnyNumH: {fileID: 0}
+  GoldNumA: {fileID: 0}
+  GoldNumH: {fileID: 0}
 --- !u!114 &883745764
 MonoBehaviour:
   m_ObjectHideFlags: 0

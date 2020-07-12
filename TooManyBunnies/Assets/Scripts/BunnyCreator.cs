@@ -135,6 +135,7 @@ public class BunnyCreator : MonoBehaviour
             new Vector3(posX, posY, 0),
             Quaternion.identity);
 
+        BunnyStats.addBunny(resultBreed);
         BunnyStats.bunnyCount++;
         bunnyBaby.transform.SetParent(bunnyStorage.transform);
         bunnyBaby.GetComponent<BunnyAI>().gender = gender;

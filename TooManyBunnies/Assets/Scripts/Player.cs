@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
     public float hitPoints = 100f;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-
+    private AudioSource audio;
+    private bool isPlayingSound = false;
 
     // Start is called before the first frame update
     void Start() {
         animator = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,9 +38,26 @@ public class Player : MonoBehaviour
 
             //Hai alex
             animator.SetBool("walking", true);
+            playWalkingSound(true);
         } 
         else {
             animator.SetBool("walking", false);
+            playWalkingSound(false);
+        }
+    }
+
+
+    private void playWalkingSound(bool walking) {
+        if (walking && isPlayingSound) {
+            return;
+        }
+        else if (walking) {
+            audio.Play();
+            isPlayingSound = true;
+        }
+        else if (isPlayingSound) {
+            audio.Stop();
+            isPlayingSound = false;
         }
     }
 }

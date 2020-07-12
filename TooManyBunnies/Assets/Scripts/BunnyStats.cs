@@ -27,7 +27,7 @@ public class BunnyStats : MonoBehaviour
     public static int silverBunnyCount;
     public static int emeraldBunnyCount;
     public static int amethystBunnyCount;
-    public static int gold;
+    public static int m_gold;
     public static int completedTasks;
     public static bool goldBunnySold;
 
@@ -54,7 +54,7 @@ public class BunnyStats : MonoBehaviour
         silverBunnyCount = 0;
         emeraldBunnyCount = 0;
         amethystBunnyCount = 0;
-        gold = 0; 
+        m_gold = 0; 
         completedTasks = 0;
 
 }
@@ -63,7 +63,6 @@ public class BunnyStats : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(bunnyCount);
         if (bunnyCount >= 1200)
         {
             UIManager.LossCondition = true;
@@ -117,6 +116,11 @@ public class BunnyStats : MonoBehaviour
         return cyanBunnyCount;
     }
 
+    public static int getCompletedTask()
+    {
+        return completedTasks;
+    }
+
     public static int getEmeraldBunnyCount()
     {
         return emeraldBunnyCount;
@@ -124,7 +128,11 @@ public class BunnyStats : MonoBehaviour
 
     public static int getGold()
     {
-        return gold;
+        return m_gold;
+    }
+
+    public static void setGold(int gold) {
+        m_gold = gold;
     }
 
     public static int getGoldenBunnyCount()
@@ -180,6 +188,12 @@ public class BunnyStats : MonoBehaviour
     public static int getYellowBunnyCount()
     {
         return yellowBunnyCount;
+    }
+
+
+    public static void addBunny(string color)
+    {
+
     }
 
 }
