@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
 
         if (LossCondition)
         {
+            Debug.Log("Fuck");
             Loser();
         }
 
@@ -57,17 +58,20 @@ public class UIManager : MonoBehaviour
     {
         string bunnies = BunnyStats.getBunnyCount().ToString();
         BunnyNumA.GetComponent<Text>().text = bunnies;
+        BunnyNumH.GetComponent<Text>().text = bunnies;
+
     }
 
     public void GoldUpdate()
     {
         string gold = BunnyStats.getGold().ToString();
         GoldNumA.GetComponent<Text>().text = gold;
+        GoldNumH.GetComponent<Text>().text = gold;
     }
 
     void Loser()
     {
-        winUI.SetActive(true);
+        loseUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
