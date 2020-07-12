@@ -54,7 +54,7 @@ public class BunnyStats : MonoBehaviour
         silverBunnyCount = 0;
         emeraldBunnyCount = 0;
         amethystBunnyCount = 0;
-        gold = 0;
+        gold = 0; 
         completedTasks = 0;
 
 }
@@ -66,7 +66,6 @@ public class BunnyStats : MonoBehaviour
         Debug.Log(bunnyCount);
         if (bunnyCount >= 1200)
         {
-            Debug.Log("Shit");
             UIManager.LossCondition = true;
         }
 
