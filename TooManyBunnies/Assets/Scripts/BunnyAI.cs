@@ -77,7 +77,6 @@ public class BunnyAI : MonoBehaviour
         }
     }
 
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (breedCooldownTime < 0 && collision.gameObject.tag == "Bunny")
@@ -126,11 +125,6 @@ public class BunnyAI : MonoBehaviour
             animator.SetBool("walking", false);
         }
         spriteRenderer.flipX = flipDirection;
-
-
-
-
-
     }
 
 }
