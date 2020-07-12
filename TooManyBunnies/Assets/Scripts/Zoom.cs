@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Zoom : MonoBehaviour {
     
-    public float zoomSpeed = 1;
+    public float zoomSpeed = 5;
     public float targetOrtho;
-    public float smoothSpeed = 2.0f;
+    public float smoothSpeed = 5.0f;
     public float minOrtho = 1.0f;
     public float maxOrtho = 20.0f;
     
