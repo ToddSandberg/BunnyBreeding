@@ -15,7 +15,6 @@ public class InventoryButtonClick : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        player = GameObject.Find("Player");
         myButton = gameObject.GetComponent<Button>();
     }
 
