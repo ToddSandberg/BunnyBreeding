@@ -5,6 +5,9 @@ using System.Threading;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.ComponentModel.Design;
+using System.Runtime.InteropServices;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,10 +19,17 @@ public class UIManager : MonoBehaviour
     public GameObject pauseUI;
     public GameObject winUI; 
     public GameObject loseUI;
+    public GameObject BunnyNumA;
+    public GameObject BunnyNumH;
+    public GameObject GoldNumA;
+    public GameObject GoldNumH;
 
     // Update is called once per frame
     void Update()
     {
+        BunnyUpdate();
+        GoldUpdate();
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (IsPaused)
@@ -41,6 +51,18 @@ public class UIManager : MonoBehaviour
             Loser();
         }
 
+    }
+
+    void BunnyUpdate()
+    {
+        string bunnies = Stats.getBunnyCount().ToString();
+        BunnyNumA.text(bunnies)
+    }
+
+    void GoldUpdate()
+    {
+        string gold = Stats.getGold().ToString();
+        GoldNumA.text(gold);
     }
 
     void Loser()

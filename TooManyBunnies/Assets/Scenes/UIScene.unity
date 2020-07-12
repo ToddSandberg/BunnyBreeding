@@ -1967,6 +1967,10 @@ MonoBehaviour:
   pauseUI: {fileID: 1185707354}
   winUI: {fileID: 1584338986}
   loseUI: {fileID: 1607530845}
+  BunnyNumA: {fileID: 2091775142}
+  BunnyNumH: {fileID: 0}
+  GoldNumA: {fileID: 1784447305}
+  GoldNumH: {fileID: 0}
 --- !u!114 &1185475100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,8 +3137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 281.4, y: -245.37}
-  m_SizeDelta: {x: -562.80554, y: -490.73227}
+  m_AnchoredPosition: {x: 325.39, y: -245.37}
+  m_SizeDelta: {x: -650.777, y: -490.73227}
   m_Pivot: {x: 0.49999997, y: 0.5000001}
 --- !u!114 &1734020041
 MonoBehaviour:
@@ -3258,7 +3262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 3
 --- !u!222 &1784447309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4080,7 +4084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 2
 --- !u!222 &2091775146
 CanvasRenderer:
   m_ObjectHideFlags: 0
