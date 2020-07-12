@@ -211,6 +211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1316750470, guid: 82c14d6bb29426c4d9fabfa844a0b7d1, type: 3}
+      propertyPath: resetSeconds
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2706926748792390674, guid: 82c14d6bb29426c4d9fabfa844a0b7d1,
         type: 3}
       propertyPath: m_Name
@@ -219,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 2706926748792390676, guid: 82c14d6bb29426c4d9fabfa844a0b7d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.88
+      value: -7.65
       objectReference: {fileID: 0}
     - target: {fileID: 2706926748792390676, guid: 82c14d6bb29426c4d9fabfa844a0b7d1,
         type: 3}
@@ -273,34 +277,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c14d6bb29426c4d9fabfa844a0b7d1, type: 3}
---- !u!1 &1316750463 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2706926748792390674, guid: 82c14d6bb29426c4d9fabfa844a0b7d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 722365556}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1316750470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316750463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38e74e121dd96de46b855303dc51baf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressionMultiplier: 1
---- !u!114 &1316750471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316750463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3ff6092c227f8d4eb2c0d7e2dec5bbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

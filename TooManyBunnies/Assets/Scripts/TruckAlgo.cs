@@ -6,18 +6,16 @@ using System;
 public class TruckAlgo : MonoBehaviour
 {
     public float progressionMultiplier = 1f;
+    public int resetSeconds = 60;
     private float currentVisitNumber = 1f;
-    private bool visiting = false;
     private float visitCooldownTime = 10;
     private Dictionary<int, string> rarityDictionary = createBunnyRarityMap();
 
     void Update()
     {
-        if (!visiting) {
-            visitCooldown();
-            if (visitCooldownTime <= 0) {
-                visit();
-            }
+        visitCooldown();
+        if (visitCooldownTime <= 0) {
+            visit();
         }
     }
 
@@ -28,14 +26,15 @@ public class TruckAlgo : MonoBehaviour
 
     private void visit() {
         string[] bunnies = {getWantedBunny(), getWantedBunny(), getWantedBunny()};
-        visiting = true;
         currentVisitNumber++;
-        gameObject.GetComponent<TruckDrive>().drive();
     }
 
     private string getWantedBunny() {
         float randomSeed = UnityEngine.Random.Range(0f, 1f);
         int bunnyNum = (int)(Math.Ceiling(randomSeed * progressionMultiplier * currentVisitNumber));
+        if (bunnyNum > 20) {
+            bunnyNum = 20;
+        }
         print("bunnyNum: " + bunnyNum);
         print("This one sells for more: " + rarityDictionary[bunnyNum]);
         return rarityDictionary[bunnyNum];
@@ -64,9 +63,5 @@ public class TruckAlgo : MonoBehaviour
         bunnyRarity.Add(19, "Adventurine");
         bunnyRarity.Add(20, "Golden");
         return bunnyRarity;
-    }
-
-    public void stopVisiting() {
-        visiting = false;
     }
 }
