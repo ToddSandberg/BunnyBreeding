@@ -66,6 +66,7 @@ public class TruckAlgo : MonoBehaviour
         for (int i = 0; i < bunnies.Count; i++) {
             if(bunnies[i] == bunnyName){
                 bunnies.RemoveAt(i);
+                BunnyStats.completedTasks++;
                 return 5;
             }
         }

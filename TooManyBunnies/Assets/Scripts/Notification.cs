@@ -18,7 +18,6 @@ public class Notification : MonoBehaviour
     void Update()
     {
         notificationCooldown();
-        print(getAlpha());
         GetComponent<CanvasGroup>().alpha = getAlpha();
         if (showTime <= 0) {
             Destroy(gameObject);
