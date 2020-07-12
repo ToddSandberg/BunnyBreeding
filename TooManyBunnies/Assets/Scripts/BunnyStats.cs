@@ -187,7 +187,7 @@ public class BunnyStats : MonoBehaviour
     }
 
 
-    public static void addBunny(Sting color)
+    public static void addBunny(string color)
     {
 
     }
