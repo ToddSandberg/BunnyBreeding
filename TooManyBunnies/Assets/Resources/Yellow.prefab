@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow
       objectReference: {fileID: 0}
+    - target: {fileID: 6646606688293537725, guid: 94458e92d4ab07a4da4022a4162a8ea4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7007a2a60634fb64a8417d7936429482, type: 2}
     - target: {fileID: 6646606688293537726, guid: 94458e92d4ab07a4da4022a4162a8ea4,
         type: 3}
       propertyPath: breed

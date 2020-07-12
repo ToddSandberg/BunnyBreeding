@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 public class UIManager : MonoBehaviour
 {
 
-    public static bool IsPaused = false;
-    public static bool WinCondition = false;
-    public static bool LossCondition = false;
+    public static bool IsPaused;
+    public static bool WinCondition;
+    public static bool LossCondition;
 
     public GameObject pauseUI;
     public GameObject winUI; 
@@ -24,6 +24,16 @@ public class UIManager : MonoBehaviour
     public GameObject GoldNumA;
     public GameObject GoldNumH;
 
+
+    void Start()
+    {
+        IsPaused = false;
+        WinCondition = false;
+        LossCondition = false;
+        pauseUI.SetActive(false);
+        loseUI.SetActive(false);
+        winUI.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -48,6 +58,7 @@ public class UIManager : MonoBehaviour
 
         if (LossCondition)
         {
+            Debug.Log("Fuck");
             Loser();
         }
 
@@ -57,17 +68,20 @@ public class UIManager : MonoBehaviour
     {
         string bunnies = BunnyStats.getBunnyCount().ToString();
         BunnyNumA.GetComponent<Text>().text = bunnies;
+        BunnyNumH.GetComponent<Text>().text = bunnies;
+
     }
 
     public void GoldUpdate()
     {
         string gold = BunnyStats.getGold().ToString();
         GoldNumA.GetComponent<Text>().text = gold;
+        GoldNumH.GetComponent<Text>().text = gold;
     }
 
     void Loser()
     {
-        winUI.SetActive(true);
+        loseUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
@@ -88,9 +102,6 @@ public class UIManager : MonoBehaviour
 
         Time.timeScale = 1f;
         Debug.Log("Resetting Game...");
-        IsPaused = false;
-        WinCondition = false;
-        LossCondition = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }

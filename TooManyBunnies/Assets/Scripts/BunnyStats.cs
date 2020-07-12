@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
-public class Stats : MonoBehaviour
+public class BunnyStats : MonoBehaviour
 {
 
     public static int bunnyCount;
@@ -60,8 +62,11 @@ public class Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bunnyCount >= 10000)
+
+        Debug.Log(bunnyCount);
+        if (bunnyCount >= 1200)
         {
+            Debug.Log("Shit");
             UIManager.LossCondition = true;
         }
 

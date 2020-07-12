@@ -78,5 +78,10 @@ PrefabInstance:
       propertyPath: breed
       value: Red
       objectReference: {fileID: 0}
+    - target: {fileID: 5423431830494413023, guid: 09e962d56e782464bbdbe0fc40411290,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2025cd3a672a88645a89c2133fec51f3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e962d56e782464bbdbe0fc40411290, type: 3}
