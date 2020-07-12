@@ -169,10 +169,10 @@ public class UIManager : MonoBehaviour
     public void RestartGame()
     {
 
-        Time.timeScale = 1f;
+
         Debug.Log("Resetting Game...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        Time.timeScale = 1f;
     }
 
     public void Resume()
@@ -185,6 +185,7 @@ public class UIManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 
     public void QuitGame()
