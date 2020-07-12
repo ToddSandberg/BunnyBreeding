@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
 
         if (LossCondition)
         {
+            Debug.Log("Fuck");
             Loser();
         }
 
@@ -70,7 +71,7 @@ public class UIManager : MonoBehaviour
 
     void Loser()
     {
-        winUI.SetActive(true);
+        loseUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
