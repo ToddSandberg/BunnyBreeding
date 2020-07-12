@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2706926748792390679}
   - component: {fileID: 2706926748792390672}
   - component: {fileID: 2706926748792390673}
+  - component: {fileID: 1316750470}
+  - component: {fileID: 1316750471}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -162,5 +164,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a9305eaa0337624587244a3e30bc0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1316750470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2706926748792390674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e74e121dd96de46b855303dc51baf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressionMultiplier: 1
+  resetSeconds: 60
+--- !u!114 &1316750471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2706926748792390674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ff6092c227f8d4eb2c0d7e2dec5bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

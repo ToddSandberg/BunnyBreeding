@@ -101,18 +101,18 @@ public class BunnyAI : MonoBehaviour
         }
         spriteRenderer.flipX = flipDirection;
 
-        if (gender == "Female" && flipDirection)
-        {
-            Transform bow = gameObject.transform.GetChild(1);
-            bow.localPosition = new Vector3(Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
-            bow.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            Transform bow = gameObject.transform.GetChild(1);
-            bow.localPosition = new Vector3(-Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
-            bow.GetComponent<SpriteRenderer>().flipX = false;
-        }
+        //if (gender == "Female" && flipDirection)
+        //{
+        //    Transform bow = gameObject.transform.GetChild(1);
+        //    bow.localPosition = new Vector3(Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
+        //    bow.GetComponent<SpriteRenderer>().flipX = true;
+        //}
+        //else
+        //{
+        //    Transform bow = gameObject.transform.GetChild(1);
+        //    bow.localPosition = new Vector3(-Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
+        //    bow.GetComponent<SpriteRenderer>().flipX = false;
+        //}
 
 
     }

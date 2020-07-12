@@ -4,32 +4,18 @@ using UnityEngine;
 
 public class TruckDrive : MonoBehaviour
 {
-    private bool driving = true;
-    private int filled = 0;
+    private int velocity = 1;
+    public int leftBound = -7;
+    public int rightBound = 7;
 
     void Update() {
-        if (driving) {
-            if (gameObject.transform.position.x > -1 && gameObject.transform.position.x < 1) {
-                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-                driving = false;
-                gameObject.transform.position += new Vector3(2f, 0, 0);
-            } else if (gameObject.transform.position.x == 30) {
-                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-                driving = false;
-                gameObject.transform.position = new Vector3(-20, 0, 0);
-                gameObject.GetComponent<TruckAlgo>().stopVisiting();
-            }
-        } else if (filled > 20) {
-            print("Filled");
-            drive();
-        } else {
-            filled++;
+        if (gameObject.transform.position.x < leftBound) {
+            velocity = 1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        } else if(gameObject.transform.position.x > rightBound) {
+            velocity = -1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
-    }
-
-    public void drive() {
-        GetComponent<Rigidbody2D>().velocity = new Vector3(1, 0, 0);  
-        driving = true;  
-        filled = 0;    
+        GetComponent<Rigidbody2D>().velocity = new Vector3(velocity, 0, 0);     
     }
 }
