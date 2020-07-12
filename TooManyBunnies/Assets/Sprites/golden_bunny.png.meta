@@ -17,6 +17,12 @@ TextureImporter:
   - first:
       213: 1627313719022665554
     second: golden_bunny_3
+  - first:
+      213: -5411846409278326850
+    second: golden_bunny_1
+  - first:
+      213: 6894334061691009641
+    second: golden_bunny_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,9 +124,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1
         width: 44
-        height: 35
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,9 +145,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 44
-        y: 0
+        y: 1
         width: 44
-        height: 35
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,8 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df3199bb32f24d6d0800000000000000
-      internalID: -2966694424012581891
+      spriteID: eb7fdfb2d5245e4b0800000000000000
+      internalID: -5411846409278326850
       vertices: []
       indices: 
       edges: []
@@ -160,9 +166,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 88
-        y: 0
+        y: 1
         width: 44
-        height: 35
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ae423721c5ccdb00800000000000000
-      internalID: 854775462670519973
+      spriteID: 96af7f52d489daf50800000000000000
+      internalID: 6894334061691009641
       vertices: []
       indices: 
       edges: []
