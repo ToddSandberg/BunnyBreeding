@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUIHandler: {fileID: 1108048609457810775}
+  holdingLimit: 20
 --- !u!1001 &6527578871703006877
 PrefabInstance:
   m_ObjectHideFlags: 0

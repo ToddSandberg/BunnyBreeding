@@ -37,8 +37,10 @@ public class BunnyPickup : MonoBehaviour
     }
 
     private void pickUpBunny(GameObject playerObject) {
-        playerObject.GetComponent<Inventory>().addBunny(gameObject);
-        gameObject.SetActive(false);
+        bool didPickup = playerObject.GetComponent<Inventory>().addBunny(gameObject);
+        if (didPickup) {
+            gameObject.SetActive(false);
+        }
     }
 
 }
