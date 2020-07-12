@@ -29,13 +29,14 @@ public class BunnyAI : MonoBehaviour
         myCollider = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         breedingScript = GameObject.Find("BunnyBreeder").GetComponent<BunnyCreator>();
-       if (gender == "Male")
+        if (gender == "Male")
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         checkMovement();
         checkBow();
         breedCooldown();
@@ -52,12 +53,16 @@ public class BunnyAI : MonoBehaviour
     private float xSpeed = 0;
     private float ySpeed = 0;
     private float moveTimer = 0f;
+    private bool flipped = false;
 
     void checkMovement()
     {
-
+        
         if (moveTimer < 0 && UnityEngine.Random.Range(0f, 1f) < bunnyMoveChance)
         {
+            if (flipped) {
+                transform.localScale = new Vector3(transform.localScale.x *-1, transform.localScale.y, 0);
+            }
             moveTimer = UnityEngine.Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
             float angle = UnityEngine.Random.Range(0, 360);
             xSpeed = bunnySpeed * Mathf.Cos(angle);
@@ -79,12 +84,36 @@ public class BunnyAI : MonoBehaviour
         }
     }
 
+    // void OnCollisionEnter (Collision col)
+    //  {
+    //      Debug.Log ("Collision");
+    //      if (col.gameObject.tag == "Fence")   
+    //      {
+    //         GetComponent<Rigidbody2D>().velocity *= -1;
+    //         //  direction = col.contacts[0].normal;
+    //         //  direction = Quaternion.AngleAxis(Random.Range(-70.0f, 70.0f), Vector3.forward) * direction;
+    //         //  transform.rotation = Quaternion.LookRotation(direction);
+    //      }
+    //  }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("collision");
         if (breedCooldownTime < -1 && collision.gameObject.tag == "Bunny")
         {
             breedCooldownTime = breedingScript.breedBunny(gameObject, collision.gameObject);
         }
+        if (collision.gameObject.tag == "Fence")   
+         {
+            // Debug.Log(GetComponent<Rigidbody2D>().velocity[0] + " xSpeed");
+            spriteRenderer.flipX = (GetComponent<Rigidbody2D>().velocity[0] < 0);
+            // checkAnimation();
+            // flipDirection = (GetComponent<Rigidbody2D>().velocity[0] > 0);
+            // GetComponent<Rigidbody2D>().velocity *= -1;
+            //  direction = col.contacts[0].normal;
+            //  direction = Quaternion.AngleAxis(Random.Range(-70.0f, 70.0f), Vector3.forward) * direction;
+            //  transform.rotation = Quaternion.LookRotation(direction);
+         }
 
     }
 
@@ -116,10 +145,11 @@ public class BunnyAI : MonoBehaviour
     void checkAnimation()
     {
         bool flipDirection = false;
-        if (xSpeed != 0 || ySpeed != 0)
+        if (GetComponent<Rigidbody2D>().velocity != Vector2.zero)
         {
             animator.SetBool("walking", true);
-            flipDirection = (xSpeed > 0);
+            // Debug.Log(GetComponent<Rigidbody2D>().velocity[0] + " xSpeed");
+            flipDirection = (GetComponent<Rigidbody2D>().velocity[0] > 0);
         }
         else
         {
