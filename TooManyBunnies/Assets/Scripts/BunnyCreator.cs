@@ -67,19 +67,10 @@ public class BunnyCreator : MonoBehaviour
 
     public int breedBunny(GameObject bunnyOne, GameObject bunnyTwo)
     {
-
-        Debug.Log("Checking breeding from " + gameObject.name);
-
         BunnyAI bunnyOneAI = bunnyOne.GetComponent<BunnyAI>();
         BunnyAI bunnyTwoAI = bunnyTwo.GetComponent<BunnyAI>();
         string genderOne = bunnyOneAI.gender;
         string genderTwo = bunnyTwoAI.gender;
-
-        if(genderOne == "Male" && genderTwo == "Female")
-        {
-            return 10;//TODO CHANGE THIS TO USE PUBLIC VARIABLE
-        }
-
 
         if (genderOne != genderTwo && genderOne == "Female")
         {
@@ -133,10 +124,9 @@ public class BunnyCreator : MonoBehaviour
             }
             return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
-
-
-
         return 0;
+
+
     }
 
     private void createBunny(string resultBreed, float posX, float posY, string gender) {
