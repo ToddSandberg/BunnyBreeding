@@ -55,13 +55,13 @@ public class UIManager : MonoBehaviour
 
     void BunnyUpdate()
     {
-        string bunnies = Stats.getBunnyCount().ToString();
-        BunnyNumA.text(bunnies)
+        string bunnies = BunnyStats.getBunnyCount().ToString();
+        BunnyNumA.text(bunnies);
     }
 
     void GoldUpdate()
     {
-        string gold = Stats.getGold().ToString();
+        string gold = BunnyStats.getGold().ToString();
         GoldNumA.text(gold);
     }
 
