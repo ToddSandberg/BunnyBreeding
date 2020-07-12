@@ -205,12 +205,173 @@ public class BunnyStats : MonoBehaviour
     public static void addBunny(string color)
     {
         bunnyCount++;
+        if (color.Equals("White"))
+        {
+            whiteBunnyCount++;
+        }
+        if (color.Equals("Gray"))
+        {
+            grayBunnyCount++;
+        }
+        if (color.Equals("Black"))
+        {
+            blackBunnyCount++;
+        }
+        if (color.Equals("Red"))
+        {
+            redBunnyCount++;
+        }
+        if (color.Equals("Blue"))
+        {
+            blueBunnyCount++;
+        }
+        if (color.Equals("Yellow"))
+        {
+            yellowBunnyCount++;
+        }
+        if (color.Equals("Pink"))
+        {
+            pinkBunnyCount++;
+        }
+        if (color.Equals("Cyan"))
+        {
+            cyanBunnyCount++;
+        }
+        if (color.Equals("Orange"))
+        {
+            orangeBunnyCount++;
+        }
+        if (color.Equals("Purple"))
+        {
+            purpleBunnyCount++;
+        }
+        if (color.Equals("Green"))
+        {
+            greenBunnyCount++;
+        }
+        if (color.Equals("Brown"))
+        {
+            brownBunnyCount++;
+        }
+        if (color.Equals("Crystal"))
+        {
+            crystalBunnyCount++;
+        }
+        if (color.Equals("Rose Quartz"))
+        {
+            roseQuartzBunnyCount++;
+        }
+        if (color.Equals("Amethyst"))
+        {
+            amethystBunnyCount++;
+        }
+        if (color.Equals("Emerald"))
+        {
+            emeraldBunnyCount++;
+        }
+        if (color.Equals("Silver"))
+        {
+            silverBunnyCount++;
+        }
+        if (color.Equals("Tourmaline"))
+        {
+            tourmalineBunnyCount++;
+        }
+        if (color.Equals("Adventurine"))
+        {
+            adventurineBunnyCount++;
+        }
+        if (color.Equals("Golden"))
+        {
+            goldenBunnyCount++;
+        }
     }
 
     
     public static void removeBunny(string color)
     {
         bunnyCount--;
+        if (color.Equals("White"))
+        {
+            whiteBunnyCount--;
+        }
+        if (color.Equals("Gray"))
+        {
+            grayBunnyCount--;
+        }
+        if (color.Equals("Black"))
+        {
+            blackBunnyCount--;
+        }
+        if (color.Equals("Red"))
+        {
+            redBunnyCount--;
+        }
+        if (color.Equals("Blue"))
+        {
+            blueBunnyCount--;
+        }
+        if (color.Equals("Yellow"))
+        {
+            yellowBunnyCount--;
+        }
+        if (color.Equals("Pink"))
+        {
+            pinkBunnyCount--;
+        }
+        if (color.Equals("Cyan"))
+        {
+            cyanBunnyCount--;
+        }
+        if (color.Equals("Orange"))
+        {
+            orangeBunnyCount--;
+        }
+        if (color.Equals("Purple"))
+        {
+            purpleBunnyCount--;
+        }
+        if (color.Equals("Green"))
+        {
+            greenBunnyCount--;
+        }
+        if (color.Equals("Brown"))
+        {
+            brownBunnyCount--;
+        }
+        if (color.Equals("Crystal"))
+        {
+            crystalBunnyCount--;
+        }
+        if (color.Equals("Rose Quartz"))
+        {
+            roseQuartzBunnyCount--;
+        }
+        if (color.Equals("Amethyst"))
+        {
+            amethystBunnyCount--;
+        }
+        if (color.Equals("Emerald"))
+        {
+            emeraldBunnyCount--;
+        }
+        if (color.Equals("Silver"))
+        {
+            silverBunnyCount--;
+        }
+        if (color.Equals("Tourmaline"))
+        {
+            tourmalineBunnyCount--;
+        }
+        if (color.Equals("Adventurine"))
+        {
+            adventurineBunnyCount--;
+        }
+        if (color.Equals("Golden"))
+        {
+            goldenBunnyCount--;
+            goldBunnySold = true;
+        }
     }
 
 }
