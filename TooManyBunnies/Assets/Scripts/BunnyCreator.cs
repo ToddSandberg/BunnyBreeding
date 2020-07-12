@@ -141,5 +141,6 @@ public class BunnyCreator : MonoBehaviour
         bunnyBaby.GetComponent<BunnyAI>().breed = resultBreed;
         bunnyBaby.GetComponent<BunnyAI>().breedTimer = breedingTimes[resultBreed];
         bunnyBaby.GetComponent<BunnyPickup>().playerHand = playerHand;
+        bunnyBaby.GetComponent<AudioSource>().Play();
     }
 }
