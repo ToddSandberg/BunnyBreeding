@@ -193,7 +193,13 @@ public class BunnyStats : MonoBehaviour
 
     public static void addBunny(string color)
     {
+        bunnyCount++;
+    }
 
+    
+    public static void removeBunny(string color)
+    {
+        bunnyCount--;
     }
 
 }

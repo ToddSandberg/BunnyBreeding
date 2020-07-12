@@ -21,6 +21,7 @@ public class SellBox : MonoBehaviour
             //TODO get correct gold amount
             BunnyStats.setGold(BunnyStats.getGold()+1);
             Destroy(collision.gameObject);
+            BunnyStats.removeBunny(collision.gameObject.GetComponent<BunnyAI>().breed);
         }
     }
 }
