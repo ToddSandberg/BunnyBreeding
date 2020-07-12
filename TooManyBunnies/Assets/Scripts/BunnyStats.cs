@@ -4,7 +4,7 @@ using System.Diagnostics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-public class Stats : MonoBehaviour
+public class BunnyStats : MonoBehaviour
 {
 
     public static int bunnyCount;
@@ -64,7 +64,7 @@ public class Stats : MonoBehaviour
     {
 
         Debug.Log(bunnyCount);
-        if (bunnyCount >= 12)
+        if (bunnyCount >= 1200)
         {
             Debug.Log("Shit");
             UIManager.LossCondition = true;

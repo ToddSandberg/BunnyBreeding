@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: breed
       value: Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 2693945733214863515, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b84fda7004f45934d8703ec976b44d1c, type: 2}
     - target: {fileID: 2693945733214863517, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
         type: 3}
       propertyPath: m_Name

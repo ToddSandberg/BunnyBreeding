@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BunnyAI : MonoBehaviour
 {
@@ -50,10 +51,10 @@ public class BunnyAI : MonoBehaviour
     void checkMovement()
     {
 
-        if (moveTimer < 0 && Random.Range(0f, 1f) < bunnyMoveChance)
+        if (moveTimer < 0 && UnityEngine.Random.Range(0f, 1f) < bunnyMoveChance)
         {
-            moveTimer = Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
-            float angle = Random.Range(0, 360);
+            moveTimer = UnityEngine.Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
+            float angle = UnityEngine.Random.Range(0, 360);
             xSpeed = bunnySpeed * Mathf.Cos(angle);
             ySpeed = bunnySpeed * Mathf.Sin(angle);
             GetComponent<Rigidbody2D>().velocity = new Vector3(xSpeed, ySpeed, 0);
@@ -65,7 +66,7 @@ public class BunnyAI : MonoBehaviour
             ySpeed = 0;
             GetComponent<Rigidbody2D>().velocity = new Vector3(xSpeed, ySpeed, 0);
             checkAnimation();
-            moveTimer = Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
+            moveTimer = UnityEngine.Random.Range(minimumBunnyMoveTime, maximumBunnyMoveTime);
         }
         else
         {
@@ -99,6 +100,20 @@ public class BunnyAI : MonoBehaviour
             animator.SetBool("walking", false);
         }
         spriteRenderer.flipX = flipDirection;
+
+        if (gender == "Female" && flipDirection)
+        {
+            Transform bow = gameObject.transform.GetChild(1);
+            bow.localPosition = new Vector3(Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
+            bow.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            Transform bow = gameObject.transform.GetChild(1);
+            bow.localPosition = new Vector3(-Math.Abs(bow.localPosition.x), bow.localPosition.y, bow.localPosition.z);
+            bow.GetComponent<SpriteRenderer>().flipX = false;
+        }
+
 
     }
 
