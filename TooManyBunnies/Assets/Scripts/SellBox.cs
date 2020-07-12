@@ -6,6 +6,7 @@ public class SellBox : MonoBehaviour
 {
 
     private BoxCollider2D myCollider;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -13,18 +14,13 @@ public class SellBox : MonoBehaviour
         myCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         // Deletes bunnies if they touch the box
         if (collision.gameObject.tag == "Bunny") {
+            //TODO get correct gold amount
+            BunnyStats.setGold(BunnyStats.getGold()+1);
             Destroy(collision.gameObject);
         }
-        
     }
 }
