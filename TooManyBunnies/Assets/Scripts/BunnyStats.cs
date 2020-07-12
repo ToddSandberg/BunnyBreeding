@@ -30,6 +30,8 @@ public class BunnyStats : MonoBehaviour
     public static int m_gold;
     public static int completedTasks;
     public static bool goldBunnySold;
+    public static float progressionMultiplier;
+    public static int penPrice;
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +56,11 @@ public class BunnyStats : MonoBehaviour
         silverBunnyCount = 0;
         emeraldBunnyCount = 0;
         amethystBunnyCount = 0;
-        m_gold = 0; 
-        completedTasks = 0;
+        m_gold = 15;
+        progressionMultiplier = 1f;
+        penPrice = 10;
+        
+    completedTasks = 0;
 
 }
 

@@ -36,10 +36,10 @@ public class BunnyCreator : MonoBehaviour
         breedingMap.Add(("Pink",        "Crystal"),     "Rose Quartz");
         breedingMap.Add(("Purple",      "Crystal"),     "Amethyst");
         breedingMap.Add(("Crystal",     "Green"),       "Emerald");
-        breedingMap.Add(("Metal",       "Cyan"),        "Silver");
+        breedingMap.Add(("Crystal",     "Cyan"),        "Silver");
         breedingMap.Add(("Rose Quartz", "Amethyst"),    "Tourmaline");
         breedingMap.Add(("Emerald",     "Silver"),      "Adventurine");
-        breedingMap.Add(("Tourmaline",  "Adventurine"),   "Golden");
+        breedingMap.Add(("Tourmaline",  "Adventurine"), "Golden");
 
         breedingTimes.Add("White", 2);
         breedingTimes.Add("Gray", 2);
