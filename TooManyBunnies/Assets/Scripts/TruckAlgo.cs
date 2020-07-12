@@ -5,28 +5,26 @@ using System;
 
 public class TruckAlgo : MonoBehaviour
 {
-    public float progressionMultiplier = 1f;
-    public int resetSeconds = 60;
+    public float progressionMultiplier = 1.5f;
     private float currentVisitNumber = 1f;
-    private float visitCooldownTime = 10;
+    //private float visitCooldownTime = 10;
     private Dictionary<int, string> rarityDictionary = createBunnyRarityMap();
+    private List<string> bunnies = new List<string>();
 
     void Update()
     {
-        visitCooldown();
-        if (visitCooldownTime <= 0) {
+        if (bunnies == null || bunnies.Count == 0) {
             visit();
         }
     }
 
-    // Cooldown time between truck visits
-    private void visitCooldown() {
-        visitCooldownTime -= Time.deltaTime;
-    }
-
     private void visit() {
-        string[] bunnies = {getWantedBunny(), getWantedBunny(), getWantedBunny()};
+        bunnies.Add(getWantedBunny());
+        bunnies.Add(getWantedBunny());
+        bunnies.Add(getWantedBunny());
         currentVisitNumber++;
+        print("Currently on visit:" + currentVisitNumber);
+
     }
 
     private string getWantedBunny() {
@@ -35,8 +33,7 @@ public class TruckAlgo : MonoBehaviour
         if (bunnyNum > 20) {
             bunnyNum = 20;
         }
-        //print("bunnyNum: " + bunnyNum);
-        //print("This one sells for more: " + rarityDictionary[bunnyNum]);
+        print("This one sells for more: " + rarityDictionary[bunnyNum]);
         return rarityDictionary[bunnyNum];
     }
 
@@ -63,5 +60,19 @@ public class TruckAlgo : MonoBehaviour
         bunnyRarity.Add(19, "Adventurine");
         bunnyRarity.Add(20, "Golden");
         return bunnyRarity;
+    }
+
+    public int removeBunny(string bunnyName) {
+        for (int i = 0; i < bunnies.Count; i++) {
+            if(bunnies[i] == bunnyName){
+                bunnies.RemoveAt(i);
+                return 5;
+            }
+        }
+        return 1;
+    }
+
+    public List<string> getBunnyTasks() {
+        return bunnies;
     }
 }

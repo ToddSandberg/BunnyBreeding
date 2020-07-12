@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9305eaa0337624587244a3e30bc0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftBound: -7
+  rightBound: 26
 --- !u!114 &1316750470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,8 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e74e121dd96de46b855303dc51baf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressionMultiplier: 1
-  resetSeconds: 60
+  progressionMultiplier: 1.5
 --- !u!114 &1316750471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ff6092c227f8d4eb2c0d7e2dec5bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}

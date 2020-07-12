@@ -32,7 +32,8 @@ public class Player : MonoBehaviour
             Vector3 directionOfMovement = new Vector3(horizontalMovement, verticalMovement, 0);
         
             // apply movement to player's transform
-            gameObject.transform.Translate(directionOfMovement);
+            if (!(horizontalMovement < 0 && transform.position.x < -9) && !(horizontalMovement > 0 && transform.position.x > 29) && !(verticalMovement > 0 && transform.position.y > 24) && !(verticalMovement < 0 && transform.position.y < -11))
+                gameObject.transform.Translate(directionOfMovement);
 
             spriteRenderer.flipX = Input.GetKey("right") || Input.GetKey("d");
 
