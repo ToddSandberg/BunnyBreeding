@@ -64,7 +64,7 @@ public class BunnyStats : MonoBehaviour
     {
 
         Debug.Log(bunnyCount);
-        if (bunnyCount >= 12)
+        if (bunnyCount >= 1200)
         {
             Debug.Log("Shit");
             UIManager.LossCondition = true;
