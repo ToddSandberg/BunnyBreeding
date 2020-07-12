@@ -60,7 +60,7 @@ public class Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bunnyCount >= 10000)
+        if (bunnyCount >= 1200)
         {
             UIManager.LossCondition = true;
         }
