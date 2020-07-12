@@ -7,6 +7,9 @@ public class InventoryUIHandler : MonoBehaviour
 {
     public GameObject player;
     public GameObject textBox;
+    public Sprite mySprite;
+    Image myImage;
+    
 
     public void refresh(Dictionary<string, int> bunnies)
     {
@@ -23,7 +26,16 @@ public class InventoryUIHandler : MonoBehaviour
     private void createTextBox(string name, int amount) {
         GameObject thisTextBox = Instantiate(textBox);
         thisTextBox.transform.SetParent(gameObject.transform);
-
         thisTextBox.GetComponentInChildren<Text>().text = name + " • " + amount;
+
+        myImage = thisTextBox.transform.GetChild(1).gameObject.GetComponent<Image>();
+        myImage.sprite = mySprite;
+
+        string type = thisTextBox.GetComponentInChildren<Text>().text.Split('-')[0].Trim();
+
+        myImage.sprite = Resources.Load<Sprite>("Sprites/" + type.ToLower() + "_bunny_1");
+        
+        Debug.Log("Sprites/" + type.ToLower() + "_bunny_1");
+        // Debug.Log(name);
     }
 }
