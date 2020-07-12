@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         IsPaused = false;
         WinCondition = false;
         LossCondition = false;
