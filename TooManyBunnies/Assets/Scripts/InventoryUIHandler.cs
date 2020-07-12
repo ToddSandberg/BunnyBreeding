@@ -34,7 +34,7 @@ public class InventoryUIHandler : MonoBehaviour
 
         myImage.sprite = Resources.Load<Sprite>("Sprites/" + type.ToLower() + "_bunny_1");
         
-        //Debug.Log("Sprites/" + type.ToLower() + "_bunny_1");
+        // Debug.Log("Sprites/" + type.ToLower() + "_bunny_1");
         // Debug.Log(name);
     }
 }
