@@ -38,7 +38,8 @@ public class BunnyAI : MonoBehaviour
     // Cooldown time between bunnies breeding
     void breedCooldown()
     {
-        breedCooldownTime -= Time.deltaTime;
+        if (gender == "Female")
+            breedCooldownTime -= Time.deltaTime;
     }
 
 
@@ -75,7 +76,9 @@ public class BunnyAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-
+        Debug.Log("Checking breeding from " + gameObject.tag);
+        Debug.Log("Checking breeding from " + collision.gameObject.tag);
+        Debug.Log(breedCooldownTime);
         if (breedCooldownTime < 0 && collision.gameObject.tag == "Bunny")
         {
             Debug.Log("Checking breeding from " + gameObject.name);
