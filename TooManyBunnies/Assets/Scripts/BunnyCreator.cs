@@ -74,7 +74,7 @@ public class BunnyCreator : MonoBehaviour
 
         if (genderOne != genderTwo && genderOne == "Female")
         {
-
+            playerHand = bunnyOne.GetComponent<BunnyPickup>().playerHand;
             Transform bunnyOneTransform = bunnyOne.transform;
             Transform bunnyTwoTransform = bunnyTwo.transform;
             float posX = (bunnyOneTransform.position.x + bunnyTwoTransform.position.x) / 2;
