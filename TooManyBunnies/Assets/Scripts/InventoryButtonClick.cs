@@ -39,7 +39,7 @@ public class InventoryButtonClick : MonoBehaviour, IPointerClickHandler
             string id = gameObject.GetComponentInChildren<Text>().text.Split('•')[0].Trim();
             GameObject bunny = player.GetComponent<Inventory>().removeBunny(id);
             bunny.SetActive(true);
-            bunny.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
+            bunny.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + player.GetComponent<CircleCollider2D>().offset.y - (2 * player.GetComponent<CircleCollider2D>().radius), 0);
     }
 
 }
