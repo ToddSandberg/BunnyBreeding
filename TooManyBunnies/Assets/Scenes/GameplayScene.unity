@@ -620,6 +620,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 6646606688293537727, guid: 94458e92d4ab07a4da4022a4162a8ea4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94458e92d4ab07a4da4022a4162a8ea4, type: 3}
 --- !u!1 &62276969
@@ -1165,6 +1170,11 @@ PrefabInstance:
       propertyPath: gender
       value: Male
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
@@ -2387,6 +2397,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7612004917202123957, guid: d7d9c9be3e17c1a4ea364fe742d83cba,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     - target: {fileID: 7612004917202123959, guid: d7d9c9be3e17c1a4ea364fe742d83cba,
         type: 3}
       propertyPath: m_Controller
@@ -2759,6 +2774,11 @@ PrefabInstance:
       propertyPath: gender
       value: Female
       objectReference: {fileID: 0}
+    - target: {fileID: 6646606688293537727, guid: 94458e92d4ab07a4da4022a4162a8ea4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94458e92d4ab07a4da4022a4162a8ea4, type: 3}
 --- !u!1 &266665271
@@ -8185,6 +8205,11 @@ PrefabInstance:
       propertyPath: gender
       value: Female
       objectReference: {fileID: 0}
+    - target: {fileID: 943202362346094383, guid: 54e32a43af3419044aec414c36706d92,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     - target: {fileID: 5468595204345949331, guid: 54e32a43af3419044aec414c36706d92,
         type: 3}
       propertyPath: playerHand
@@ -8781,6 +8806,11 @@ PrefabInstance:
       propertyPath: gender
       value: Female
       objectReference: {fileID: 0}
+    - target: {fileID: 2693945733214863513, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     - target: {fileID: 2693945733214863517, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
         type: 3}
       propertyPath: m_Name
@@ -9098,6 +9128,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 296171519f4b0284fb5b39f5b55f02ed, type: 2}
+    - target: {fileID: 943202362346094383, guid: 54e32a43af3419044aec414c36706d92,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     - target: {fileID: 5468595204345949331, guid: 54e32a43af3419044aec414c36706d92,
         type: 3}
       propertyPath: playerHand
@@ -11294,6 +11329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1236485285}
     m_Modifications:
+    - target: {fileID: 2693945733214863513, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     - target: {fileID: 2693945733214863515, guid: c83a7fe2695bc794ab7c6ebeff5ab21e,
         type: 3}
       propertyPath: m_Controller
@@ -15944,6 +15984,11 @@ PrefabInstance:
       propertyPath: gender
       value: Female
       objectReference: {fileID: 0}
+    - target: {fileID: 7612004917202123957, guid: d7d9c9be3e17c1a4ea364fe742d83cba,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d9c9be3e17c1a4ea364fe742d83cba, type: 3}
 --- !u!1 &2090993443
@@ -16043,6 +16088,11 @@ PrefabInstance:
       propertyPath: gender
       value: Female
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086473, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dbbad82e4f021304c9a87a5c758c40e1, type: 2}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name
