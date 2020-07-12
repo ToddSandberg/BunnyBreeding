@@ -432,9 +432,9 @@ GameObject:
   m_Component:
   - component: {fileID: 514847498}
   - component: {fileID: 514847497}
-  - component: {fileID: 514847496}
   - component: {fileID: 514847499}
   - component: {fileID: 514847500}
+  - component: {fileID: 514847496}
   m_Layer: 0
   m_Name: SellBox
   m_TagString: Untagged
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 514847495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2655ac848c0181428ef84e5536f0eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: b3ff6092c227f8d4eb2c0d7e2dec5bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &514847497
