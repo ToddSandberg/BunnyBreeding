@@ -63,7 +63,6 @@ public class BunnyStats : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(bunnyCount);
         if (bunnyCount >= 1200)
         {
             UIManager.LossCondition = true;
@@ -115,6 +114,11 @@ public class BunnyStats : MonoBehaviour
     public static int getCyanBunnyCount()
     {
         return cyanBunnyCount;
+    }
+
+    public static int getCompletedTask()
+    {
+        return completedTasks;
     }
 
     public static int getEmeraldBunnyCount()
@@ -180,6 +184,12 @@ public class BunnyStats : MonoBehaviour
     public static int getYellowBunnyCount()
     {
         return yellowBunnyCount;
+    }
+
+
+    public static void addBunny(Sting color)
+    {
+
     }
 
 }
