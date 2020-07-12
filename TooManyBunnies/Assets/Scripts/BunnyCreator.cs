@@ -32,10 +32,10 @@ public class BunnyCreator : MonoBehaviour
         breedingMap.Add(("Red",         "Blue"),        "Purple");
         breedingMap.Add(("Blue",        "Yellow"),      "Green");
         breedingMap.Add(("Orange",      "Black"),       "Brown");
-        breedingMap.Add(("Gray",        "Brown"),       "Metal");
-        breedingMap.Add(("Pink",        "Metal"),       "Rose Quartz");
-        breedingMap.Add(("Purple",      "Metal"),       "Amethyst");
-        breedingMap.Add(("Metal",       "Green"),       "Emerald");
+        breedingMap.Add(("Gray",        "Brown"),       "Crystal");
+        breedingMap.Add(("Pink",        "Crystal"),     "Rose Quartz");
+        breedingMap.Add(("Purple",      "Crystal"),     "Amethyst");
+        breedingMap.Add(("Crystal",     "Green"),       "Emerald");
         breedingMap.Add(("Metal",       "Cyan"),        "Silver");
         breedingMap.Add(("Rose Quartz", "Amethyst"),    "Tourmaline");
         breedingMap.Add(("Emerald",     "Silver"),      "Adventurine");
@@ -50,7 +50,7 @@ public class BunnyCreator : MonoBehaviour
         breedingTimes.Add("Purple", 2);
         breedingTimes.Add("Green", 2);
         breedingTimes.Add("Brown", 2);
-        breedingTimes.Add("Metal", 2);
+        breedingTimes.Add("Crystal", 2);
         breedingTimes.Add("Rose Quartz", 2);
         breedingTimes.Add("Amethyst", 2);
         breedingTimes.Add("Emerald", 2);
@@ -72,12 +72,20 @@ public class BunnyCreator : MonoBehaviour
             return 0;
         }
 
+        Debug.Log("Checking breeding from " + gameObject.name);
+
         BunnyAI bunnyOneAI = bunnyOne.GetComponent<BunnyAI>();
         BunnyAI bunnyTwoAI = bunnyTwo.GetComponent<BunnyAI>();
         string genderOne = bunnyOneAI.gender;
         string genderTwo = bunnyTwoAI.gender;
 
-        if (genderOne != genderTwo)
+        if(genderOne == "Male" && genderTwo == "Female")
+        {
+            return 10;//TODO CHANGE THIS TO USE PUBLIC VARIABLE
+        }
+
+
+        if (genderOne != genderTwo && genderOne == "Female")
         {
 
             Transform bunnyOneTransform = bunnyOne.transform;
