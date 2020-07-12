@@ -127,6 +127,10 @@ public class BunnyStats : MonoBehaviour
         return gold;
     }
 
+    public static int setGold(int gold) {
+        this.gold = gold;
+    }
+
     public static int getGoldenBunnyCount()
     {
         return goldenBunnyCount;
