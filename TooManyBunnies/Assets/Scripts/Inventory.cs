@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -8,8 +9,14 @@ public class Inventory : MonoBehaviour
     private Dictionary<string, Stack<GameObject>> bunnyGameObjects = new Dictionary<string, Stack<GameObject>>();
 
     public GameObject inventoryUIHandler;
+    public int holdingLimit = 20;
 
-    public void addBunny(GameObject bunny) {
+    public bool addBunny(GameObject bunny) {
+        print(bunnies.Sum(x => x.Value) + ":" + holdingLimit);
+        if (bunnies.Sum(x => x.Value) >= holdingLimit) {
+            return false;
+        }
+
         BunnyAI bunnyAiScript = bunny.GetComponent<BunnyAI>();
         string key = bunnyAiScript.breed + "-" + bunnyAiScript.gender;
         if (bunnies.ContainsKey(key)) {
@@ -25,10 +32,8 @@ public class Inventory : MonoBehaviour
         }
 
         inventoryUIHandler.GetComponent<InventoryUIHandler>().refresh(bunnies);
-
-        //DEBUG while there is no UI to show
-        // print("added bunny");
-        // printDictionary();
+        
+        return true;
     }
 
     public GameObject removeBunny(string bunnyId) {
@@ -45,10 +50,6 @@ public class Inventory : MonoBehaviour
         }
 
         inventoryUIHandler.GetComponent<InventoryUIHandler>().refresh(bunnies);
-
-        //DEBUG while there is no UI to show
-        // print("removed bunny");
-        // printDictionary();
 
         return bunnyGameObject;
     }

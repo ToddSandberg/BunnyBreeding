@@ -28,7 +28,7 @@ public class BunnyPickup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isBeingHeld == false) {
+        if (Input.GetKeyDown("e") && isBeingHeld == false) {
             GameObject player = playerHand.transform.parent.gameObject;
             if (this.GetComponent<CircleCollider2D> ().IsTouching(player.GetComponent<CircleCollider2D>())) {
                 pickUpBunny(player);
@@ -37,8 +37,10 @@ public class BunnyPickup : MonoBehaviour
     }
 
     private void pickUpBunny(GameObject playerObject) {
-        playerObject.GetComponent<Inventory>().addBunny(gameObject);
-        gameObject.SetActive(false);
+        bool didPickup = playerObject.GetComponent<Inventory>().addBunny(gameObject);
+        if (didPickup) {
+            gameObject.SetActive(false);
+        }
     }
 
 }

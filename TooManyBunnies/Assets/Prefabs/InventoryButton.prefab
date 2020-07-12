@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8463250439625969563}
   - component: {fileID: 5589187354338174328}
   - component: {fileID: 5403005866792350237}
+  - component: {fileID: -3114316022429975230}
   m_Layer: 5
   m_Name: InventoryButton
   m_TagString: Untagged
@@ -132,9 +133,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40a786366c0f0544af0e8fa95a30c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHand: {fileID: 0}
+  player: {fileID: 0}
   bunnyBreeder: {fileID: 6991769597727364379, guid: b098f8f755eb8004583506495bab08a3,
     type: 3}
+--- !u!114 &-3114316022429975230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259261054303838443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a4152f6a874514c89bad11b85f9b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6917285086455628176
 GameObject:
   m_ObjectHideFlags: 0
