@@ -37,6 +37,7 @@ public class BunnyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        goldBunnySold = false;
         bunnyCount = GameObject.Find("Bunnies").transform.childCount;
         whiteBunnyCount = 2;
         blackBunnyCount = 2;
