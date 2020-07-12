@@ -3780,6 +3780,26 @@ MonoBehaviour:
   BunnyNumH: {fileID: 1301331221}
   GoldNumA: {fileID: 1743960379}
   GoldNumH: {fileID: 194532016}
+  BunnyWhite: {fileID: 0}
+  BunnyBlack: {fileID: 0}
+  BunnyGray: {fileID: 0}
+  BunneyRed: {fileID: 0}
+  BunneyBlue: {fileID: 0}
+  BunneyYellow: {fileID: 0}
+  BunnyBrown: {fileID: 0}
+  BunnyPurple: {fileID: 0}
+  BunnyGreen: {fileID: 0}
+  BunnyOrange: {fileID: 0}
+  BunnyCrystal: {fileID: 0}
+  BunnyCyan: {fileID: 0}
+  BunnyGolden: {fileID: 0}
+  BunnyRoseQuartz: {fileID: 0}
+  BunnyAdventurine: {fileID: 0}
+  BunnyTourmaline: {fileID: 0}
+  BunnySilver: {fileID: 0}
+  BunnyEmerald: {fileID: 0}
+  BunnyAmathyst: {fileID: 0}
+  CompletedTasks: {fileID: 0}
 --- !u!114 &1063066324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6132,7 +6152,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1808746938, guid: a5131d803670d9d46bf1e699acdb3af8, type: 3}
+    - target: {fileID: 1826105101635070319, guid: a5131d803670d9d46bf1e699acdb3af8,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
