@@ -2357,6 +2357,7 @@ GameObject:
   - component: {fileID: 1063066320}
   - component: {fileID: 1063066319}
   - component: {fileID: 1063066323}
+  - component: {fileID: 1063066324}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -2462,6 +2463,40 @@ MonoBehaviour:
   pauseUI: {fileID: 345003318}
   winUI: {fileID: 1274685876}
   loseUI: {fileID: 1622311671}
+--- !u!114 &1063066324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063066318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f843a36c08a82489e8b2cd79e2f660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bunnyCount: 0
+  whiteBunnyCount: 0
+  blackBunnyCount: 0
+  grayBunnyCount: 0
+  redBunnyCount: 0
+  blueBunnyCount: 0
+  yellowBunnyCount: 0
+  brownBunnyCount: 0
+  purpleBunnyCount: 0
+  greenBunnyCount: 0
+  orangeBunnyCount: 0
+  crystalBunnyCount: 0
+  cyanBunnyCount: 0
+  goldenBunnyCount: 0
+  roseQuartzBunnyCount: 0
+  adventurineBunnyCount: 0
+  tourmalineBunnyCount: 0
+  silverBunnyCount: 0
+  emeraldBunnyCount: 0
+  amethystBunnyCount: 0
+  gold: 0
+  completedTasks: 0
 --- !u!1 &1069613633
 GameObject:
   m_ObjectHideFlags: 0
