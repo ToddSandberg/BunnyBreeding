@@ -59,8 +59,7 @@ public class BunnyStats : MonoBehaviour
         m_gold = 10;
         progressionMultiplier = 1f;
         penPrice = 10;
-        
-    completedTasks = 0;
+        completedTasks = 0;
 
 }
 
@@ -68,7 +67,7 @@ public class BunnyStats : MonoBehaviour
     void Update()
     {
 
-        if (bunnyCount >= 1200)
+        if (bunnyCount >= 800)
         {
             UIManager.LossCondition = true;
         }
