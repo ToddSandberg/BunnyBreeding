@@ -90,6 +90,44 @@ public class UIManager : MonoBehaviour
         string bunnies = BunnyStats.getBunnyCount().ToString();
         BunnyNumA.GetComponent<Text>().text = bunnies;
         BunnyNumH.GetComponent<Text>().text = bunnies;
+        string bunniesWh = BunnyStats.getWhiteBunnyCount().ToString();
+        BunnyWhite.GetComponent<Text>().text = bunniesWh;
+        string bunniesBl = BunnyStats.getBlackBunnyCount().ToString();
+        BunnyBlack.GetComponent<Text>().text = bunniesBl;
+        string bunniesGr = BunnyStats.getGrayBunnyCount().ToString();
+        BunnyGray.GetComponent<Text>().text = bunniesGr;
+        string bunniesRe = BunnyStats.getRedBunnyCount().ToString();
+        BunneyRed.GetComponent<Text>().text = bunniesRe;
+        string bunniesBlu = BunnyStats.getBlueBunnyCount().ToString();
+        BunneyBlue.GetComponent<Text>().text = bunniesBlu;
+        string bunniesYe = BunnyStats.getYellowBunnyCount().ToString();
+        BunneyYellow.GetComponent<Text>().text = bunniesYe;
+        string bunniesBr = BunnyStats.getBrownBunnyCount().ToString();
+        BunnyBrown.GetComponent<Text>().text = bunniesBr;
+        string bunniesPu = BunnyStats.getPurpleBunnyCount().ToString();
+        BunnyPurple.GetComponent<Text>().text = bunniesPu;
+        string bunniesGre = BunnyStats.getGreenBunnyCount().ToString();
+        BunnyGreen.GetComponent<Text>().text = bunniesGre;
+        string bunniesOr = BunnyStats.getOrangeBunnyCount().ToString();
+        BunnyOrange.GetComponent<Text>().text = bunniesOr;
+        string bunniesCr = BunnyStats.getCrystalBunnyCount().ToString();
+        BunnyCrystal.GetComponent<Text>().text = bunniesCr;
+        string bunniesCy = BunnyStats.getCyanBunnyCount().ToString();
+        BunnyCyan.GetComponent<Text>().text = bunniesCy;
+        string bunniesGo = BunnyStats.getGoldenBunnyCount().ToString();
+        BunnyGolden.GetComponent<Text>().text = bunniesGo;
+        string bunniesQz = BunnyStats.getRoseQuartzBunnyCount().ToString();
+        BunnyRoseQuartz.GetComponent<Text>().text = bunniesQz;
+        string bunniesAd = BunnyStats.getAdventurineBunnyCount().ToString();
+        BunnyAdventurine.GetComponent<Text>().text = bunniesAd;
+        string bunniesTo = BunnyStats.getTourmalineBunnyCount().ToString();
+        BunnyTourmaline.GetComponent<Text>().text = bunniesTo;
+        string bunniesSi = BunnyStats.getSilverBunnyCount().ToString();
+        BunnySilver.GetComponent<Text>().text = bunniesSi;
+        string bunniesEm = BunnyStats.getEmeraldBunnyCount().ToString();
+        BunnyEmerald.GetComponent<Text>().text = bunniesEm;
+        string bunniesAm = BunnyStats.getAmethystBunnyCount().ToString();
+        BunnyAmathyst.GetComponent<Text>().text = bunniesAm;
 
     }
 
