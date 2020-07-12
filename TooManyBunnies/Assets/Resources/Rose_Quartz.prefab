@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7625766633501430699}
   - component: {fileID: 3397576184666669079}
   m_Layer: 9
-  m_Name: Rose Quartz
+  m_Name: Rose_Quartz
   m_TagString: Bunny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f9496003d317747aff122c0423f2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breed: Rose Quartz
+  breed: Rose_Quartz
   gender: Female
   bunnySpeed: 2.5
   minimumBunnyMoveTime: 1

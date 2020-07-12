@@ -33,11 +33,11 @@ public class BunnyCreator : MonoBehaviour
         breedingMap.Add(("Blue",        "Yellow"),      "Green");
         breedingMap.Add(("Orange",      "Black"),       "Brown");
         breedingMap.Add(("Gray",        "Brown"),       "Crystal");
-        breedingMap.Add(("Pink",        "Crystal"),     "Rose Quartz");
+        breedingMap.Add(("Pink",        "Crystal"),     "Rose_Quartz");
         breedingMap.Add(("Purple",      "Crystal"),     "Amethyst");
         breedingMap.Add(("Crystal",     "Green"),       "Emerald");
         breedingMap.Add(("Crystal",     "Cyan"),        "Silver");
-        breedingMap.Add(("Rose Quartz", "Amethyst"),    "Tourmaline");
+        breedingMap.Add(("Rose_Quartz", "Amethyst"),    "Tourmaline");
         breedingMap.Add(("Emerald",     "Silver"),      "Adventurine");
         breedingMap.Add(("Tourmaline",  "Adventurine"), "Golden");
 
@@ -51,7 +51,7 @@ public class BunnyCreator : MonoBehaviour
         breedingTimes.Add("Green", 2);
         breedingTimes.Add("Brown", 2);
         breedingTimes.Add("Crystal", 2);
-        breedingTimes.Add("Rose Quartz", 2);
+        breedingTimes.Add("Rose_Quartz", 2);
         breedingTimes.Add("Amethyst", 2);
         breedingTimes.Add("Emerald", 2);
         breedingTimes.Add("Silver", 2);
