@@ -76,7 +76,7 @@ public class BunnyAI : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (breedCooldownTime < 0)
+        if (breedCooldownTime < 0 && collision.gameObject.tag == "Bunny")
         {
             Debug.Log("Checking breeding from " + gameObject.name);
             breedCooldownTime = breedingScript.breedBunny(gameObject, collision.gameObject);

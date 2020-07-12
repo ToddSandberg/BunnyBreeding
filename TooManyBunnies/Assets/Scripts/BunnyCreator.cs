@@ -67,10 +67,6 @@ public class BunnyCreator : MonoBehaviour
 
     public int breedBunny(GameObject bunnyOne, GameObject bunnyTwo)
     {
-        if (bunnyTwo.gameObject.tag != "Bunny")
-        {
-            return 0;
-        }
 
         Debug.Log("Checking breeding from " + gameObject.name);
 
