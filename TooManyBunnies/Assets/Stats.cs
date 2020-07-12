@@ -73,37 +73,37 @@ public class Stats : MonoBehaviour
     }
 
     // Getters
-    public int getAdventurineBunnyCount()
+    public static int getAdventurineBunnyCount()
     {
         return adventurineBunnyCount;
     }
 
-    public int getAmethystBunnyCount()
+    public static int getAmethystBunnyCount()
     {
         return amethystBunnyCount;
     }
 
-    public int getBlackBunnyCount()
+    public static int getBlackBunnyCount()
     {
         return blackBunnyCount;
     }
 
-    public int getBlueBunnyCount()
+    public static int getBlueBunnyCount()
     {
         return blueBunnyCount;
     }
 
-    public int getBrownBunnyCount()
+    public static int getBrownBunnyCount()
     {
         return brownBunnyCount;
     }
 
-    public int getBunnyCount()
+    public static int getBunnyCount()
     {
         return bunnyCount;
     }
 
-    public int getCrystalBunnyCount()
+    public static int getCrystalBunnyCount()
     {
         return crystalBunnyCount;
     }
@@ -113,67 +113,67 @@ public class Stats : MonoBehaviour
         return cyanBunnyCount;
     }
 
-    public int getEmeraldBunnyCount()
+    public static int getEmeraldBunnyCount()
     {
         return emeraldBunnyCount;
     }
 
-    public int getGold()
+    public static int getGold()
     {
         return gold;
     }
 
-    public int getGoldenBunnyCount()
+    public static int getGoldenBunnyCount()
     {
         return goldenBunnyCount;
     }
 
-    public int getGreenBunnyCount()
+    public static int getGreenBunnyCount()
     {
         return greenBunnyCount;
     }
 
-    public int getGrayBunnyCount()
+    public static int getGrayBunnyCount()
     {
         return grayBunnyCount;
     }
 
-    public int getOrangeBunnyCount()
+    public static int getOrangeBunnyCount()
     {
         return orangeBunnyCount;
     }
 
-    public int getPurpleBunnyCount()
+    public static int getPurpleBunnyCount()
     {
         return purpleBunnyCount;
     }
 
-    public int getRedBunnyCount()
+    public static int getRedBunnyCount()
     {
         return redBunnyCount;
     }
 
-    public int getRoseQuartzBunnyCount()
+    public static int getRoseQuartzBunnyCount()
     {
         return roseQuartzBunnyCount;
     }
 
-    public int getSilverBunnyCount()
+    public static int getSilverBunnyCount()
     {
         return silverBunnyCount;
     }
 
-    public int getTourmalineBunnyCount()
+    public static int getTourmalineBunnyCount()
     {
         return tourmalineBunnyCount;
     }
 
-    public int getWhiteBunnyCount()
+    public static int getWhiteBunnyCount()
     {
         return whiteBunnyCount;
     }
 
-    public int getYellowBunnyCount()
+    public static int getYellowBunnyCount()
     {
         return yellowBunnyCount;
     }

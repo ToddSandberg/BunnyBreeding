@@ -39,7 +39,7 @@ public class BunnyCreator : MonoBehaviour
         breedingMap.Add(("Metal",       "Cyan"),        "Silver");
         breedingMap.Add(("Rose Quartz", "Amethyst"),    "Tourmaline");
         breedingMap.Add(("Emerald",     "Silver"),      "Adventurine");
-        breedingMap.Add(("Tourmaline",  "Adventure"),   "Golden");
+        breedingMap.Add(("Tourmaline",  "Adventurine"),   "Golden");
 
         breedingTimes.Add("White", 2);
         breedingTimes.Add("Gray", 2);
@@ -67,27 +67,14 @@ public class BunnyCreator : MonoBehaviour
 
     public int breedBunny(GameObject bunnyOne, GameObject bunnyTwo)
     {
-        if (bunnyTwo.gameObject.tag != "Bunny")
-        {
-            return 0;
-        }
-
-        Debug.Log("Checking breeding from " + gameObject.name);
-
         BunnyAI bunnyOneAI = bunnyOne.GetComponent<BunnyAI>();
         BunnyAI bunnyTwoAI = bunnyTwo.GetComponent<BunnyAI>();
         string genderOne = bunnyOneAI.gender;
         string genderTwo = bunnyTwoAI.gender;
 
-        if(genderOne == "Male" && genderTwo == "Female")
-        {
-            return 10;//TODO CHANGE THIS TO USE PUBLIC VARIABLE
-        }
-
-
         if (genderOne != genderTwo && genderOne == "Female")
         {
-
+            playerHand = bunnyOne.GetComponent<BunnyPickup>().playerHand;
             Transform bunnyOneTransform = bunnyOne.transform;
             Transform bunnyTwoTransform = bunnyTwo.transform;
             float posX = (bunnyOneTransform.position.x + bunnyTwoTransform.position.x) / 2;
@@ -137,10 +124,9 @@ public class BunnyCreator : MonoBehaviour
             }
             return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
-
-
-
         return 0;
+
+
     }
 
     private void createBunny(string resultBreed, float posX, float posY, string gender) {
@@ -149,6 +135,7 @@ public class BunnyCreator : MonoBehaviour
             new Vector3(posX, posY, 0),
             Quaternion.identity);
 
+        BunnyStats.bunnyCount++;
         bunnyBaby.transform.SetParent(bunnyStorage.transform);
         bunnyBaby.GetComponent<BunnyAI>().gender = gender;
         bunnyBaby.GetComponent<BunnyAI>().breed = resultBreed;

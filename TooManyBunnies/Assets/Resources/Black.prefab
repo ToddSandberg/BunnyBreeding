@@ -31,6 +31,16 @@ PrefabInstance:
       propertyPath: breedTimer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086472, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: breedCooldownTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112350631201086475, guid: b58b6708fb1c3824ab099eebd9fbf297,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 296171519f4b0284fb5b39f5b55f02ed, type: 2}
     - target: {fileID: 5112350631201086477, guid: b58b6708fb1c3824ab099eebd9fbf297,
         type: 3}
       propertyPath: m_Name

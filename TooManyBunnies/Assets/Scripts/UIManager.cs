@@ -5,21 +5,41 @@ using System.Threading;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.ComponentModel.Design;
+using System.Runtime.InteropServices;
 
 public class UIManager : MonoBehaviour
 {
 
-    public static bool IsPaused = false;
-    public static bool WinCondition = false;
-    public static bool LossCondition = false;
+    public static bool IsPaused;
+    public static bool WinCondition;
+    public static bool LossCondition;
 
     public GameObject pauseUI;
     public GameObject winUI; 
     public GameObject loseUI;
+    public GameObject BunnyNumA;
+    public GameObject BunnyNumH;
+    public GameObject GoldNumA;
+    public GameObject GoldNumH;
 
+
+    void Start()
+    {
+        IsPaused = false;
+        WinCondition = false;
+        LossCondition = false;
+        pauseUI.SetActive(false);
+        loseUI.SetActive(false);
+        winUI.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
+        BunnyUpdate();
+        GoldUpdate();
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (IsPaused)
@@ -38,14 +58,30 @@ public class UIManager : MonoBehaviour
 
         if (LossCondition)
         {
+            Debug.Log("Fuck");
             Loser();
         }
 
     }
 
+    public void BunnyUpdate()
+    {
+        string bunnies = BunnyStats.getBunnyCount().ToString();
+        BunnyNumA.GetComponent<Text>().text = bunnies;
+        BunnyNumH.GetComponent<Text>().text = bunnies;
+
+    }
+
+    public void GoldUpdate()
+    {
+        string gold = BunnyStats.getGold().ToString();
+        GoldNumA.GetComponent<Text>().text = gold;
+        GoldNumH.GetComponent<Text>().text = gold;
+    }
+
     void Loser()
     {
-        winUI.SetActive(true);
+        loseUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
@@ -66,9 +102,6 @@ public class UIManager : MonoBehaviour
 
         Time.timeScale = 1f;
         Debug.Log("Resetting Game...");
-        IsPaused = false;
-        WinCondition = false;
-        LossCondition = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
