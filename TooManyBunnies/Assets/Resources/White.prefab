@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5112350631201086473}
   - component: {fileID: 1518292917}
   m_Layer: 9
-  m_Name: Bunny
+  m_Name: White
   m_TagString: Bunny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,10 +103,10 @@ MonoBehaviour:
   breed: White
   gender: Male
   bunnySpeed: 0.5
-  minimumBunnyMoveTime: 1
-  maximumBunnyMoveTime: 2.5
+  minimumBunnyMoveTime: 2
+  maximumBunnyMoveTime: 4
   bunnyMoveChance: 0.5
-  breedTimer: 2
+  breedTimer: 6
 --- !u!95 &5112350631201086475
 Animator:
   serializedVersion: 3

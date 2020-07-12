@@ -13,7 +13,7 @@ public class BunnyAI : MonoBehaviour
     public float breedTimer;
 
 
-    private float breedCooldownTime;
+    public float breedCooldownTime;
     private CircleCollider2D myCollider;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -78,6 +78,7 @@ public class BunnyAI : MonoBehaviour
 
         if (breedCooldownTime < 0)
         {
+            Debug.Log("Checking breeding from " + gameObject.name);
             breedCooldownTime = breedingScript.breedBunny(gameObject, collision.gameObject);
         }
 
