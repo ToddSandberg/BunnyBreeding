@@ -23,6 +23,26 @@ public class UIManager : MonoBehaviour
     public GameObject BunnyNumH;
     public GameObject GoldNumA;
     public GameObject GoldNumH;
+    public GameObject BunnyWhite;
+    public GameObject BunnyBlack;
+    public GameObject BunnyGray;
+    public GameObject BunneyRed;
+    public GameObject BunneyBlue;
+    public GameObject BunneyYellow;
+    public GameObject BunnyBrown;
+    public GameObject BunnyPurple;
+    public GameObject BunnyGreen;
+    public GameObject BunnyOrange;
+    public GameObject BunnyCrystal;
+    public GameObject BunnyCyan;
+    public GameObject BunnyGolden;
+    public GameObject BunnyRoseQuartz;
+    public GameObject BunnyAdventurine;
+    public GameObject BunnyTourmaline;
+    public GameObject BunnySilver;
+    public GameObject BunnyEmerald;
+    public GameObject BunnyAmathyst;
+    public GameObject CompletedTasks;
 
 
     void Start()
@@ -34,11 +54,13 @@ public class UIManager : MonoBehaviour
         loseUI.SetActive(false);
         winUI.SetActive(false);
     }
+
     // Update is called once per frame
     void Update()
     {
         BunnyUpdate();
         GoldUpdate();
+        TaskUpdate();
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -58,7 +80,6 @@ public class UIManager : MonoBehaviour
 
         if (LossCondition)
         {
-            Debug.Log("Fuck");
             Loser();
         }
 
@@ -78,6 +99,13 @@ public class UIManager : MonoBehaviour
         GoldNumA.GetComponent<Text>().text = gold;
         GoldNumH.GetComponent<Text>().text = gold;
     }
+
+    public void TaskUpdate()
+    {
+        string task = BunnyStats.getCompletedTask().ToString();
+        CompletedTasks.GetComponent<Text>().text = task;
+    }
+
 
     void Loser()
     {
