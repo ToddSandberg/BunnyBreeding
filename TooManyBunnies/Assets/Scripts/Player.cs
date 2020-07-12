@@ -37,12 +37,12 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = Input.GetKey("right") || Input.GetKey("d");
 
             //Hai alex
-            playWalkingSound(true);
             animator.SetBool("walking", true);
+            playWalkingSound(true);
         } 
         else {
-            playWalkingSound(false);
             animator.SetBool("walking", false);
+            playWalkingSound(false);
         }
     }
 
