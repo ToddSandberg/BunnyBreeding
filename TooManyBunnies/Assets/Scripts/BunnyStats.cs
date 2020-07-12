@@ -56,7 +56,7 @@ public class BunnyStats : MonoBehaviour
         silverBunnyCount = 0;
         emeraldBunnyCount = 0;
         amethystBunnyCount = 0;
-        m_gold = 15;
+        m_gold = 10;
         progressionMultiplier = 1f;
         penPrice = 10;
         

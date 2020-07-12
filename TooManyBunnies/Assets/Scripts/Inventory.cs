@@ -12,7 +12,6 @@ public class Inventory : MonoBehaviour
     public int holdingLimit = 1;
 
     public bool addBunny(GameObject bunny) {
-        print(holdingLimit);
         if (bunnies.Sum(x => x.Value) >= holdingLimit) {
             return false;
         }

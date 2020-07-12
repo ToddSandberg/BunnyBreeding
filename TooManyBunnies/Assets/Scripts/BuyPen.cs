@@ -28,7 +28,7 @@ public class BuyPen : MonoBehaviour
         if (BunnyStats.m_gold >= BunnyStats.penPrice)
         {
             BunnyStats.m_gold -= BunnyStats.penPrice;
-            BunnyStats.penPrice = (int)(BunnyStats.penPrice * 2.5 * BunnyStats.progressionMultiplier);
+            BunnyStats.penPrice = (int)(BunnyStats.penPrice * 1.5 * BunnyStats.progressionMultiplier);
             gameObject.GetComponentInChildren<Text>().text = "Buy a pen: " + BunnyStats.penPrice;
             createPen();
         }

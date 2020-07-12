@@ -184,12 +184,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breed: Rose Quartz
   gender: Female
-  bunnySpeed: 0.5
-  minimumBunnyMoveTime: 2
-  maximumBunnyMoveTime: 4
+  bunnySpeed: 2.5
+  minimumBunnyMoveTime: 1
+  maximumBunnyMoveTime: 3
   bunnyMoveChance: 0.5
-  breedTimer: 6
-  breedCooldownTime: 6
+  breedTimer: 18
+  value: 15
 --- !u!95 &7625766633501430697
 Animator:
   serializedVersion: 3

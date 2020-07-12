@@ -12,9 +12,10 @@ public class BunnyAI : MonoBehaviour
     public float maximumBunnyMoveTime;
     public float bunnyMoveChance;
     public float breedTimer;
+    public int value;
 
 
-    public float breedCooldownTime;
+    private float breedCooldownTime;
     private CircleCollider2D myCollider;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -23,11 +24,12 @@ public class BunnyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        breedCooldownTime = breedTimer;
         animator = gameObject.GetComponent<Animator>();
         myCollider = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         breedingScript = GameObject.Find("BunnyBreeder").GetComponent<BunnyCreator>();
-        if (gender == "Male")
+       if (gender == "Male")
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
     }
 
@@ -79,9 +81,8 @@ public class BunnyAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (breedCooldownTime < 0 && collision.gameObject.tag == "Bunny")
+        if (breedCooldownTime < -1 && collision.gameObject.tag == "Bunny")
         {
-            Debug.Log("Checking breeding from " + gameObject.name);
             breedCooldownTime = breedingScript.breedBunny(gameObject, collision.gameObject);
         }
 

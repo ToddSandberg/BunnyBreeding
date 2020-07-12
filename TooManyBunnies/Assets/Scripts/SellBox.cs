@@ -19,7 +19,7 @@ public class SellBox : MonoBehaviour
         // Deletes bunnies if they touch the box
         if (collision.gameObject.tag == "Bunny") {
             //TODO get correct gold amount
-            BunnyStats.setGold(BunnyStats.getGold()+1);
+            BunnyStats.setGold(BunnyStats.getGold() + collision.gameObject.GetComponent<BunnyAI>().value);
             Destroy(collision.gameObject);
             BunnyStats.removeBunny(collision.gameObject.GetComponent<BunnyAI>().breed);
         }

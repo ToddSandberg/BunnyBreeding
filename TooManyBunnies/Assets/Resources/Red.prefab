@@ -78,6 +78,21 @@ PrefabInstance:
       propertyPath: breed
       value: Red
       objectReference: {fileID: 0}
+    - target: {fileID: 5423431830494413020, guid: 09e962d56e782464bbdbe0fc40411290,
+        type: 3}
+      propertyPath: breedTimer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423431830494413020, guid: 09e962d56e782464bbdbe0fc40411290,
+        type: 3}
+      propertyPath: value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423431830494413020, guid: 09e962d56e782464bbdbe0fc40411290,
+        type: 3}
+      propertyPath: bunnySpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5423431830494413023, guid: 09e962d56e782464bbdbe0fc40411290,
         type: 3}
       propertyPath: m_Controller

@@ -185,12 +185,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breed: White
   gender: Male
-  bunnySpeed: 0.5
-  minimumBunnyMoveTime: 2
-  maximumBunnyMoveTime: 4
+  bunnySpeed: 1.5
+  minimumBunnyMoveTime: 1
+  maximumBunnyMoveTime: 3
   bunnyMoveChance: 0.5
-  breedTimer: 6
-  breedCooldownTime: 6
+  breedTimer: 12
+  value: 1
 --- !u!95 &5112350631201086475
 Animator:
   serializedVersion: 3

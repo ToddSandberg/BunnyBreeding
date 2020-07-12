@@ -65,7 +65,7 @@ public class BunnyCreator : MonoBehaviour
 
 
 
-    public int breedBunny(GameObject bunnyOne, GameObject bunnyTwo)
+    public float breedBunny(GameObject bunnyOne, GameObject bunnyTwo)
     {
         BunnyAI bunnyOneAI = bunnyOne.GetComponent<BunnyAI>();
         BunnyAI bunnyTwoAI = bunnyTwo.GetComponent<BunnyAI>();
@@ -122,7 +122,7 @@ public class BunnyCreator : MonoBehaviour
             {
                 createBunny(breedOne, posX, posY, gender);
             }
-            return 10;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
+            return bunnyOneAI.breedTimer;  //TODO CHANGE THIS TO USE PUBLIC VARIABLE
         }
         return 0;
 

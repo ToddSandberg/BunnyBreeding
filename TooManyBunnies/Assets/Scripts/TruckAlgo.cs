@@ -35,8 +35,8 @@ public class TruckAlgo : MonoBehaviour
         if (bunnyNum > 20) {
             bunnyNum = 20;
         }
-        print("bunnyNum: " + bunnyNum);
-        print("This one sells for more: " + rarityDictionary[bunnyNum]);
+        //print("bunnyNum: " + bunnyNum);
+        //print("This one sells for more: " + rarityDictionary[bunnyNum]);
         return rarityDictionary[bunnyNum];
     }
 
