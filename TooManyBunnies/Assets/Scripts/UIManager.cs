@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     public GameObject BunneyBlue;
     public GameObject BunneyYellow;
     public GameObject BunnyBrown;
+    public GameObject BunnyPink;
     public GameObject BunnyPurple;
     public GameObject BunnyGreen;
     public GameObject BunnyOrange;
@@ -106,6 +107,8 @@ public class UIManager : MonoBehaviour
         BunnyBrown.GetComponent<Text>().text = bunniesBr;
         string bunniesPu = BunnyStats.getPurpleBunnyCount().ToString();
         BunnyPurple.GetComponent<Text>().text = bunniesPu;
+        string bunniesPi = BunnyStats.getPinkBunnyCount().ToString();
+        BunnyPink.GetComponent<Text>().text = bunniesPi;
         string bunniesGre = BunnyStats.getGreenBunnyCount().ToString();
         BunnyGreen.GetComponent<Text>().text = bunniesGre;
         string bunniesOr = BunnyStats.getOrangeBunnyCount().ToString();

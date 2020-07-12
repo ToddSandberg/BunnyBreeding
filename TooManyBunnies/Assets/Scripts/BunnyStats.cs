@@ -16,6 +16,7 @@ public class BunnyStats : MonoBehaviour
     public static int yellowBunnyCount;
     public static int brownBunnyCount;
     public static int purpleBunnyCount;
+    public static int pinkBunnyCount;
     public static int greenBunnyCount;
     public static int orangeBunnyCount;
     public static int crystalBunnyCount;
@@ -37,17 +38,18 @@ public class BunnyStats : MonoBehaviour
     void Start()
     {
         bunnyCount = GameObject.Find("Bunnies").transform.childCount;
-        whiteBunnyCount = 0;
-        blackBunnyCount = 0;
+        whiteBunnyCount = 2;
+        blackBunnyCount = 2;
         grayBunnyCount = 0;
-        redBunnyCount = 0;
-        blueBunnyCount = 0;
-        yellowBunnyCount = 0;
+        redBunnyCount = 2;
+        blueBunnyCount = 2;
+        yellowBunnyCount = 2;
         brownBunnyCount = 0;
         purpleBunnyCount = 0;
         greenBunnyCount = 0;
         orangeBunnyCount = 0;
         crystalBunnyCount = 0;
+        pinkBunnyCount = 0;
         cyanBunnyCount = 0;
         goldenBunnyCount = 0;
         roseQuartzBunnyCount = 0;
@@ -157,6 +159,11 @@ public class BunnyStats : MonoBehaviour
     public static int getOrangeBunnyCount()
     {
         return orangeBunnyCount;
+    }
+
+    public static int getPinkBunnyCount()
+    {
+        return pinkBunnyCount;
     }
 
     public static int getPurpleBunnyCount()
