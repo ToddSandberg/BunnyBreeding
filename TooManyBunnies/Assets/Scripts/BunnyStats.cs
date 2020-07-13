@@ -258,7 +258,7 @@ public class BunnyStats : MonoBehaviour
         {
             crystalBunnyCount++;
         }
-        if (color.Equals("Rose Quartz"))
+        if (color.Equals("Rose_Quartz"))
         {
             roseQuartzBunnyCount++;
         }
